@@ -1,0 +1,6975 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+a
+	transition: color .3s
+	&:hover
+		color: $accent
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+*
+	outline: none !important
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.2
+	font-family: Roboto
+	overflow-x: hidden
+	color: $text
+	margin-left: auto
+	margin-right: auto
+	font-weight: 30
+	color: #4F4F4F
+
+
+.slider-dots
+	padding-left: 0
+	list-style-type: none
+	display: flex
+	padding-top: 20px
+	li
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 15px
+		height: 15px
+		border-radius: 50%
+		border-color: $accent
+		border: 1px solid $accent
+		margin-left: 10px	
+		cursor: pointer
+		&:first-child
+			margin-left: 0
+		button
+			border-color: transparent
+			background-color: transparent
+			font-size: 0
+			display: block
+			width: 5px
+			height: 5px
+			padding: 0
+			border-radius: 50%
+			background-color: $accent
+			transition: opacity .3s
+			opacity: 0
+	li.slick-active
+		button
+			opacity: 1
+
+
+			
+.big-search-wrap
+	width: 100%
+	position: relative
+.big-input
+	width: 100%
+	height: 56px
+	border-radius: 5px
+	border: 1px solid #F2F2F2
+	padding-left: 60px
+	padding-right: 20px
+	font-size: 20px
+	color: $text
+	&::placeholder
+		color: #7C7C7C
+.big-search_btn
+	width: 50px
+	height: 50px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/bigsearch.svg')
+	border: none
+	background-color: transparent
+	position: absolute
+	left: 0
+	top: calc(50% - 25px)
+// text 
+
+
+.num-list_number
+	width: 37px
+	height: 37px
+	border: 1px solid #F2F2F2
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #828282
+	font-size: 15px
+	font-weight: 700
+	position: absolute
+	left: 0
+	top: calc(50% - 37px / 2)
+.num-list_item
+	position: relative
+	padding-left: 50px
+	margin-bottom: 42px
+.small-red-link
+	font-size: 12px
+	font-weight: 700
+	color: $accent
+	&:hover
+		color: $accent
+.text-small-h
+	font-size: 18px
+	color: #4F4F4F
+	font-weight: 700
+	margin-bottom: 28px
+.text-small-h-16
+	font-size: 16px
+.text-small-h-14
+	font-size: 14px
+.text-small-h-green
+	color: #27AE60
+	font-size: 16px
+.text-p
+	font-size: 14px
+	color: #4F4F4F
+.text-p--bold
+	font-size: 14px
+	color: #4F4F4F
+	font-weight: 700
+.text-p--red
+	font-size: 14px
+	color: $accent
+	font-weight: 700
+.text-p--red_bottom-line
+	font-size: 14px
+	color: $accent
+	font-weight: 700
+	border-bottom: 1px solid $accent
+	padding-bottom: 4px
+	margin-bottom: 15px
+.text-p_50
+	width: 50%
+.ul-2-lev
+	margin-top: 10px
+	padding-left: 25px
+	p
+		margin-bottom: 10px
+		padding-left: 17px
+		position: relative
+		&:before
+			content: '▸ '
+			position: absolute
+			left: 0
+			top: 2px
+
+.custom-ul_red-dot-wrap
+	display: flex
+	.custom-ul_red-dot
+		margin-right: 60px
+		&:last-child
+			margin-right: 0
+.custom-ul_red-dot
+	padding-left: 0
+	list-style-type: none
+	margin-bottom: 30px
+	margin-left: 10px
+	li
+		position: relative
+		padding-left: 20px
+		margin-bottom: 10px
+		font-size: 14px
+		color: #4F4F4F
+		&:last-child
+			margin-bottom: 0
+		&:before
+			content: ''
+			position: absolute
+			display: block
+			width: 5px
+			height: 5px
+			background-color: $accent
+			border-radius: 50%
+			left: 0
+			top: 6px
+	.text-small-h
+		margin-bottom: 1px
+.important-ul
+	li
+		a
+			color: $accent
+			font-size: 16px
+			font-weight: 600
+			position: relative
+
+			&:hover
+				text-decoration: none
+				&:after
+					right: -40px
+			&:after
+				content: ''
+				display: block
+				width: 13px
+				height: 8px
+				background-position: center
+				background-repeat: no-repeat
+				background-image: url('../img/icons/redright.svg')
+				position: absolute
+				right: -30px
+				top: calc(50% - 2px)
+				transition: .3s
+.important-block_contact-wrap
+	display: flex
+	margin-bottom: 20px
+.important-block
+	margin-bottom: 30px
+	.text-small-h-green
+		margin-bottom: 10px
+
+.important-block_contact-red
+	.important-block_contact-text
+		color: $accent
+	.important-block_contact-link
+		color: #4F4F4F
+.important-block_contact-text
+	margin-bottom: 5px
+.important-block_contact-link
+	font-size: 16px
+	color: #52675B
+	font-weight: 700
+	&:hover
+		color: $accent
+		text-decoration: none
+.important-block_contact-first
+	margin-right: 100px
+
+.info-block
+	position: relative
+	padding-left: 32px
+	&:before
+		content: ""
+		display: block
+		width: 25px
+		height: 25px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/info.svg')
+		position: absolute
+		left: 0
+		top: 0
+	p
+		color: #4F4F4F
+
+
+.default-form
+	display: block
+	width: 100%
+	padding:
+		left: 30px
+		right: 30px
+		top: 30px
+		bottom: 30px
+	border: 2px solid #F2F2F2
+	border-radius: 3px
+	.input
+		width: 100%
+		margin-bottom: 10px
+	.btn
+		margin-left: auto
+		margin-right: auto
+		width: 283px
+		height: 51px
+	textarea
+		margin-bottom: 20px
+	.polit-conf
+		width: 260px
+		margin-left: auto
+		margin-right: auto
+
+.contact-form_mobile-mask
+	display: none
+	width: 375px
+	form
+		display: flex
+		flex-direction: column
+	.default-form-contact
+		padding: 0
+		.form-head
+			font-size: 17px
+			text-align: left
+			margin-bottom: 20px
+.contact-form_mobile-btn
+	display: none
+	margin-bottom: 30px
+.default-form-contact
+	border: none
+	padding-left: 0
+	padding-top: 56px
+	.input
+		font-size: 14px
+	textarea
+		font-size: 14px
+	.form-head
+		color: #4F4F4F
+		font-size: 18px
+		font-weight: 700
+		margin-bottom: 46px
+	.btn-white
+		width: 100%
+	.polit-conf
+		width: 100%
+		padding-left: 37px
+textarea
+	width: 100%
+	height: 135px
+	border: 1px solid #F2F2F2
+	padding-left: 11px
+	padding-right: 11px
+	padding-top: 15px
+	padding-bottom: 15px
+	border-radius: 3px
+	resize: none
+.form-head
+	font-size: 20px
+	color: #219653
+	font-weight: 700
+	text-align: center
+	margin-bottom: 10px
+.form-desc
+	font-size: 16px
+	color: #828282
+	text-align: center
+	margin-bottom: 30px
+button.btn
+	border: none
+.modal
+	display: none
+	.input
+		width: 100%
+		height: 48px
+
+
+.call-me
+	.input
+		margin-bottom: 20px
+.input
+	height: 48px
+	padding-left: 15px
+	border: 1px solid #F2F2F2
+	&::placeholder
+		color: #C4C4C4
+
+.wrap-select-cities
+	height: 280px
+	overflow: auto
+	margin-bottom: 50px
+.select-sity-wrap
+	margin-bottom: 10px
+.select-sity-item
+	color: #2F3D56
+
+	&:hover
+		text-decoration: none
+
+.getCities
+	margin-bottom: 30px
+.modal-head
+	font-size: 26px
+	color: #4F4F4F
+	font-weight: 600
+	margin-bottom: 20px
+.modal-decrip
+	font-size: 14px
+	color: #5B5B5B
+	margin-bottom: 20px
+.modal
+	width: 546px
+	height: 606px
+	padding-top: 38px
+	padding-bottom: 38px
+	padding-left: 40px
+	padding-right: 40px
+	background-color: white
+
+.call-me
+	width: 700px
+	height: 455px
+	padding: 0
+.call-me-inner
+	width: 100%
+	height: 100%
+	display: flex
+.call-me-content
+	width: calc(100% - 364px)
+	padding:
+		top: 38px
+		bottom: 38px
+		right: 30px
+	.btn
+		width: 100%
+.polit-conf
+	font-size: 12px
+	color: #828282
+	line-height: 20px
+	position: relative
+	padding-left: 25px
+	margin-top: 30px
+.checkbox-custom-hidd
+	display: none
+	&:checked + label
+		background-image: url('../img/icons/check.svg')
+.checkbox-custom
+	display: block
+	width: 15px
+	height: 15px
+	background-color: #0099DE
+	border-radius: 1px
+	position: absolute
+	left: 0
+	top: 5px
+	cursor: pointer
+	background-position: 3px 2px
+	background-repeat: no-repeat
+
+.call-me-left
+	width: 364px
+	height: 100%
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	background-image: url('../img/callman.jpg')
+	position: relative
+.name-call-man
+	position: absolute
+	width: 139px
+	height: 59px
+	background-position: center
+	background-repeat: no-repeat
+	color: white
+	background-image: url('../img/icons/callmename.svg')
+	padding-left: 14px
+	padding-top: 6px
+	padding-bottom: 6px
+	bottom: 26px
+	padding-right: 10px
+.name-call-man_head
+	font-size: 14px
+	font-weight: 600
+.name-call-man_descrip
+	font-size: 11px
+	line-height: 1.2
+
+.modal-login
+	height: 422px
+	width: 404px
+	.wrap-big-btn
+		margin-top: 40px
+		margin-bottom: 100px
+.body-active
+	overflow: hidden
+.wrap-link-center
+	text-align: center
+.login-mail
+	font-weight: 600
+	&:hover
+		text-decoration: none
+
+.menu-mask
+	position: fixed
+	width: 100vw
+	height: 100vh
+	background-color: white
+	z-index: 100
+	padding-top: 94px
+	overflow-y: auto
+	opacity: 0
+	pointer-events: none
+	transition: opacity .3s
+	.logo
+		position: absolute
+		left: 15px
+		top: 13px
+	.big-btn
+		margin-bottom: 30px
+.mask_wrap-time
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	.your-city
+		margin-right: 0
+		margin-left: 20px
+.footer-time-work-with-clock
+	position: relative
+	padding-left: 30px
+	span
+		color: #4F4F4F
+		font-size: 14px
+	&:before
+		content: ''
+		width: 21px
+		height: 21px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/clock.svg')
+		position: absolute
+		left: 0
+		top: 0
+.menu-mask_active
+	opacity: 1
+	pointer-events: auto
+.mobile-menu_item-wrap
+	margin-bottom: 30px
+	&:last-child
+		margin-bottom: 0
+.mobile-menu_item
+	text-transform: uppercase
+	color: #2F3D56
+	&:hover
+		color: #2F3D56
+.mobile-menu
+	display: flex
+	align-items: center
+	flex-direction: column
+.mobile-menu-2
+	margin-top: 60px
+	.mobile-menu_item
+		color: #828282
+		text-transform: none
+
+.menu-mask-bottom-tel-wrap
+	text-align: center
+	padding-top: 28px
+	padding-bottom: 28px
+.menu-mask-bottom-tel
+	color: $accent
+	font-size: 18px
+	font-weight: 600
+.close
+	width: 24px
+	height: 24px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/close.svg')
+	position: absolute
+	right: 15px
+	top: 20px
+.wrapper
+	overflow-x: hidden
+.pagination
+	color: #B0B0B0
+	font-size: 12px
+	.container
+		display: flex
+		align-items: center
+		height: 50px
+
+.pagination-mob
+	display: none
+	.container
+		position: relative
+		padding-left: 45px
+	.pagination-mob_link
+		color: #4F4F4F
+		font-size: 18px
+		font-weight: 700
+		
+		&:before
+			content: ''
+			display: block
+			width: 24px
+			height: 24px
+			background-position: center
+			background-repeat: no-repeat
+			background-image: url('../img/icons/mobpag.svg')
+			position: absolute
+			left: 15px
+			top: calc(50% - 12px)
+
+		&:hover
+			text-decoration: none
+
+.pagination_item
+	color: #B0B0B0
+	&:after
+		content: '—'
+		margin-left: 5px
+		margin-right: 5px
+	&:last-child
+		&:after
+			content: ''
+	&:hover
+		color: #B0B0B0
+		text-decoration: none
+
+
+
+.video-btn
+	width: 100%
+	height: 50px
+	background-color: white
+	color: black
+	display: flex
+	justify-content: center
+	font-size: 16px
+	align-items: center
+	border-radius: 3px
+	font-weight: 600
+	&:hover
+		color: black
+		text-decoration: none
+
+.opacity-btn
+	background-color: transparent
+	color: white
+	border: 1px solid #fff
+	transition: color .3s
+	&:hover
+		color: black
+		background-color: white
+
+
+.btn-star
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 63px
+		height: 63px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/star.svg')
+		position: absolute
+		right: -30px
+		top: -35px
+.btn-opacity
+	width: 250px
+	height: 58px
+	color: white
+	font-size: 16px
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 5px
+	border: 1px solid white
+	background-color: transparent
+	transition: background-color .3s
+	&:hover
+		background-color: white
+		color: #4f4f4f
+
+.big-btn
+	width: 343px
+	height: 56px
+	border-radius: 3px
+	display: flex
+	justify-content: center
+	align-items: center
+	color: white
+	font-weight: 500
+	font-size: 16px
+	position: relative
+	transition: background-color .3s
+	&:hover
+		color: white
+		text-decoration: none
+.btn-gray
+	background-color: #95AC8F
+	&:hover
+		background-color: #A1B59B
+
+.btn-short
+	width: 250px
+	height: 40px
+	font-size: 16px
+
+.btn305w
+	width: 305px
+.big-btn-2
+	width: 447px
+	height: 65px
+	font-size: 27px
+	font-weight: 600
+	border-radius: 8px
+.btn-red
+	background-color: $accent
+	&:hover
+		background-color: #B60B0B
+.btn-rose
+	background-color: #D50162
+.btn-inst
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 22px
+		height: 22px
+		position: absolute
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/instsvg.svg')
+		top: calc(50% - 11px)
+		left: 80px
+.btn-orange
+	background-color: #FFCA41
+.custom-ul
+	color: #7C7C7C
+	font-size: 16px
+	list-style-type: none
+	padding-left: 0
+
+	.custom-li
+		padding-left: 20px
+		position: relative
+		margin-bottom: 10px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			width: 7px
+			height: 7px
+			background-color: #2F3D56
+			border-radius: 50%
+			top: 6px
+.custom-ul-small
+	.custom-li	
+		font-size: 16px
+		color: #7C7C7C
+		&:before
+			width: 4px
+			height: 4px
+			background-color: #7C7C7C
+			top: 11px
+
+.wrap-big-btn
+	display: flex
+	justify-content: center
+
+.section-head_item-red, .section-head_item-blue, .section-head_item-opacity, .section-head_item-green
+	text-transform: uppercase
+	font-size: 44px
+	font-weight: 700
+	font-family: RobotoCon
+.section-head_item-small
+	font-size: 32px
+
+.section-head_item-blue
+	color: #2F3D56
+.section-head_item-blue_small
+	font-size: 32px
+.section-head_item-red
+	color: $accent
+.section-head_item-green
+	color: #95AC8F
+.section-head_item-opacity
+	color: #9E9E9E
+
+.descrip
+	color: #9E9E9E
+	font-size: 32px
+	width: 686px
+.reduction
+	.descrip
+		font-weight: 300
+		font-family: Roboto
+		color: #9E9E9E
+.big-btn_arrow
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 17px
+		height: 8px
+		background-image: url('../img/icons/arrowr.svg')
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		top: calc(50% - 2px)
+		right: 50px
+
+
+
+.container
+	max-width: 1170px
+	padding:
+		right: 15px
+		left: 15px
+	margin:
+		left: auto
+		right: auto
+
+
+
+
+.main-screen
+	background-image: url('../img/ms.jpg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+.main-screen-container
+	position: relative
+	min-height: 884px
+	position: relative
+	z-index: 1
+	&:after
+		content: ''
+		background-image: url('../img/mainbg.png')
+		background-position: left
+		background-repeat: no-repeat
+		position: absolute
+		background-size: cover
+		width: 1050px
+		height: 100%
+		top: 0px
+		right: -380px
+		z-index: -1
+
+
+@media (max-width: 1500px)
+	.main-screen-container
+		&:after
+			right: -158px
+			width: 781px
+
+.main-screen_good
+	display: flex
+	margin-top: 80px
+.main-screen_good-item
+	width: 234px
+	height: 119px
+	background-color: #FFFFFF
+	border-radius: 3.025px
+	box-shadow: 0px 7px 21px 0px rgba(0,0,0,0.18)
+	display: flex
+	color: inherit
+	margin-right: 15px
+	padding-right: 10px
+	&:hover
+		color: inherit
+		text-decoration: none
+.main-screen_good-item-long
+	width: 358px
+	padding-top: 15px
+	padding-left: 26px
+	padding-bottom: 15px
+	flex-direction: column
+	justify-content: space-between
+	background-image: url('../img/icons/like.svg')
+	background-position: right bottom
+	background-repeat: no-repeat
+.main-screen_good-item-long_head
+	font-weight: 700
+	text-transform: uppercase
+	font-size: 27px
+	color: #2F3D56
+.main-screen_good-item-long_text
+	color: #2F3D56
+	font-size: 20px
+
+.main-screen_good-item-long_link
+	font-size: 12px
+	color: $accent
+.main-screen_good-item_img
+	width: 122px
+	height: 100%
+	display: block
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	overflow: hidden
+	&:after
+		content: ''
+		display: block
+		width: 122px
+		height: 100%
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		position: absolute
+		background-image: url('../img/icons/wshad.svg')
+		right: -60px
+
+.main-screen_good-item_logo
+	width: 56px
+	height: 19px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	margin-bottom: 8px
+
+.main-screen_good-item_red-price
+	color: $accent
+	font-size: 12px
+
+.main-screen_good-item_old-price
+	font-size: 8px
+	text-decoration: line-through
+
+.main-screen_good-item_content
+	padding-top: 11px
+	padding-bottom: 11px
+	width: calc(100% - 122px)
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.main-screen_good-item_name
+	font-size: 10px
+	font-weight: 700
+	display: block
+
+.main-screen
+	.section-head_item-blue_small
+		width: 530px
+		position: relative
+.main-screen-content
+	padding-top: 25px
+	.section-head
+		margin-bottom: 50px
+
+
+.fullgrade
+	width: 72px
+	height: 23px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/fullgrade.svg')
+	position: absolute
+	bottom: 11px
+	left: 230px
+
+.main-screen_garant-head
+	position: relative
+	padding-left: 70px
+	display: block
+	font-size: 20px
+	font-weight: 700
+	color: #2F3D56
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 48px
+		height: 48px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/garant.svg')
+		left: 0
+		top: calc(50% - 18px)
+
+.main-screen_garant-head-wrap
+	display: flex
+	align-items: center
+	margin-bottom: 40px
+.garant-item
+	width: 529px
+	margin-bottom: 23px
+	padding-left: 70px
+	position: relative
+	color:
+	&:last-child
+		margin-bottom: 0
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		top: 12px
+		width: 51px
+		height: 2px
+		background-color: $accent
+.garant-ask
+	display: block
+	border-radius: 50%
+	width: 17px
+	height: 17px
+	border: 1px solid $accent
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/ask.svg')
+	margin-left: 10px
+	margin-top: 4px
+
+.header-top
+	background-color: #252B35
+	color: white
+	font-size: 12px
+	.container
+		min-height: 40px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.your-city
+	padding-left: 15px
+	margin-right: 40px
+	cursor: pointer
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 11px
+		height: 11px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/place.svg')
+		position: absolute
+		top: calc(50% - 11px / 2)
+		left: 0
+
+.current-city
+	border-bottom: 1px solid #92959A
+.header-top_left
+	display: flex
+	align-items: center
+.header-top_right
+	display: flex
+	align-items: center
+.header-top_menu-item
+	color: white
+	font-weight: 300
+	margin-right: 40px
+	&:last-child
+		margin-right: 0
+	&:hover
+		color: white
+		text-decoration: underline
+
+
+.header_phone
+	font-size: 14px
+	font-weight: 600
+	color: white
+	margin-right: 40px
+	&:hover
+		text-decoration: none
+		color: white
+
+
+.hours-works_text
+	position: relative
+	padding-left: 15px
+	&:before
+		content: ''
+		display: block
+		width: 6px
+		height: 6px
+		background-color: #27AE60
+		border-radius: 50%
+		position: absolute
+		left: 0
+		top: calc(50% - 2px)
+
+.hours-works
+	position: relative
+	padding-right: 15px
+	cursor: pointer
+	&:after
+		content: ''
+		display: block
+		width: 10px
+		height: 10px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/bottom.svg')
+		position: absolute
+		right: 0
+		top: calc(50% - 4px)
+		transition: transform .1s
+	&:hover
+		.hours-works_modal
+			opacity: 1
+			pointer-events: auto
+		&:after
+			transform: rotate(180deg)
+
+.hours-works_modal
+	position: absolute
+	z-index: 12
+	right: 0
+	top: 11px
+	padding-top: 30px
+	opacity: 0
+	pointer-events: none
+	transition: opacity .3s
+
+.hours-works_modal-content
+	width: 256px
+	height: 180px
+	box-shadow: 0px 0px 8px rgba(37, 40, 43, 0.12)
+	background-color: white
+	position: relative
+	z-index: 10px
+	padding-left: 21px
+	padding-right: 21px
+	padding-bottom: 27px
+	padding-top: 27px
+	&:before
+		content: ''
+		display: block
+		width: 12px
+		height: 12px
+		background-color: white
+		transform: rotate(45deg)
+		top: -6px
+		position: absolute
+		right: 90px
+.hours-works_modal-content-btn
+	width: 100%
+	height: 32px
+	color: $accent
+	font-weight: 600px
+	font-size: 14px
+	display: flex
+	justify-content: center
+	align-items: center
+	border: 1px solid $accent
+	transition: background-color .3s color .3s
+	border-radius: 5px
+
+	&:hover
+		background-color: $accent
+		color: white
+		text-decoration: none
+.header-bottom
+	padding-top: 25px
+	padding-bottom: 25px
+	//background-color: white
+	//box-shadow: 0px 5px 26px -10px rgba(0,0,0,0.2)
+	position: relative
+	.header-bottom-container
+		display: flex
+		justify-content: space-between
+
+.header-bottom-inner, .header-bottom-main-screen--active
+	box-shadow: none
+	border-bottom: 1px solid #FAFAFA
+	.where-searh_text
+		color: $text
+	.where-searh
+		color: #4F4F4F
+		&:after
+			width: 9px
+			background-image: url('../img/icons/bottomblack.svg')
+			top: calc(50% - 6px)
+	.header-search
+		color: $text
+		border: 1px solid #f2f2f2
+
+	.burger
+		background-image: url('../img/icons/burgerblack.svg')
+
+	.header-search-btn
+		background-image: url('../img/icons/searchblack.svg')
+
+	.login
+		color: $text
+
+	.cart-link
+		background-image: url('../img/icons/cartblack.svg')
+
+.header-bottom-main-screen--active
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 100vw
+		height: 100%
+		background-color: white
+		text-decoration: none
+		top: 0
+		left: 0
+		z-index: 0
+		position: absolute
+	&:before
+		content: ''
+		display: block
+		width: 100vw
+		height: 100%
+		background-color: white
+		text-decoration: none
+		top: 0
+		left: -1000px
+		z-index: 0
+		position: absolute
+
+	.header-bottom-container
+		position: relative
+		z-index: 2
+
+
+
+.catalog-mask_wrap
+	opacity: 0
+	pointer-events: none
+	transition: opacity .3s
+	position: absolute
+	top: 108px
+	left: 0
+	z-index: 11
+	background-color: white
+	&:before
+		content: ''
+		display: block
+		height: calc(100vh - 149px)
+		width: 1000px
+		background-color: white
+		position: absolute
+		left: -900px
+		top: 0
+		z-index: 0
+
+.catalog-mask
+	width: 100%
+	background-color: white
+	height: calc(100vh - 149px)
+	overflow-y: auto
+	padding-bottom: 20px
+	width: 100vw
+	.container
+		position: relative
+
+.header-bottom-main-screen
+	.catalog-mask
+		.container
+			margin-left: 0
+			margin-right: 0
+.catalog-mask--active
+	opacity: 1
+	pointer-events: auto
+.catalog-brands
+	position: absolute
+	right: 0
+	top: 0
+	background-color: #FAFAFA
+	width: 427px
+	padding-top: 24px
+	padding-left: 41px
+.brands-wrap
+	display: flex
+	flex-wrap: wrap
+	width: 190px
+.brands-item
+	display: block
+	width: 75px
+	height: 70px
+	background-color: white
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	margin-right: 20px
+
+.catalog-brands_head
+	font-size: 14px
+	color: #828282
+	text-transform: uppercase
+	font-weight: 700
+.catalog-left
+	position: relative
+	width: 270px
+.catalog-left-item
+	width: 100%
+	border-bottom: 1px solid #E6E6E6
+	&:hover
+		.catalog-left-item_count
+			border-color: transparent
+			background-color: $accent
+			color: white
+		.catalog-left-item_dropdown
+			opacity: 1
+			pointer-events: auto
+
+.catalog-left-item_link
+	color: #4F4F4F
+	font-size: 14px
+	display: block
+	width: 100%
+	height: 100%
+	position: relative
+	min-height: 58px
+	display: flex
+	align-items: center
+	&:hover
+		text-decoration: none
+
+.catalog-left-item_count
+	height: 24px
+	min-width: 32px
+	display: flex
+	justify-content: center
+	align-items: center
+	border: 1px solid #EEEEEE
+	font-size: 12px
+	border-radius: 4px
+	transition: .3s
+	cursor: pointer
+	position: absolute
+	right: 0
+	top: calc(50% - 12px)
+
+.catalog-left-item_dropdown
+	position: absolute
+	top: 15px
+	opacity: 0
+	pointer-events: none
+	display: flex
+	flex-direction: column
+	left: 270px
+	padding-left: 30px
+	width: 350px
+	min-height: 300px
+	transition: opacity .3s
+.catalog-left-item_dropdown-item
+	margin-bottom: 24px
+	color: #4F4F4F
+	font-size: 14px
+	&:last-child
+		margin-bottom: 0
+	&:hover
+		text-decoration: none
+
+
+
+.header-bottom-scroll
+	position: fixed
+	width: 100%
+	z-index: 11
+	top: 0
+
+.header-bottom_left
+	display: flex
+	align-items: center
+
+
+.logo
+	&:hover
+		text-decoration: none
+
+.logo-top
+	display: flex
+	align-items: center
+	margin-bottom: 10px
+
+.logo-image
+	width: 37px
+	height: 37px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/logo.svg')
+	margin-right: 15px
+.logo-text
+	font-family: Arial
+	font-size: 11px
+	text-transform: uppercase
+	color: #4F4F4F
+	font-weight: 900
+	display: block
+	width: 87px
+	line-height: 12px
+.logo-bottom
+	font-size: 9px
+	color: #4F4F4F
+	text-transform: uppercase
+	font-weight: 900
+	display: flex
+	align-items: center
+
+.logo-bottom_image
+	width: 80px
+	height: 9px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/alternova_logo_seriy 1.svg')
+	margin-left: 6px
+
+.header-bottom_right
+	display: flex
+	align-items: center
+
+
+.header-bottom_right-search
+	position: relative
+	margin-right: 40px
+	width: 333px
+.where-searh
+	width: 69px
+	height: 100%
+	position: absolute
+	background-color: rgba(#E5E5E5, 0.2)
+	display: flex
+	align-items: center
+	color: #4f4f4f
+	cursor: pointer
+	padding-left: 15px
+	&:after
+		content: ''
+		position: absolute
+		width: 10px
+		height: 10px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/bottom.svg')
+		right: 10px
+		top: calc(50% - 4px)
+.where-searh_text
+	font-size: 10px
+	color: white
+.header-search
+	width: 333px
+	height: 32px
+	border: 1px solid white
+	border-radius: 5px
+	background: none
+	color: white
+	font-size: 12px
+	padding-left: 90px
+	padding-right: 42px
+
+
+
+.header-search-btn
+	position: absolute
+	right: 0
+	top: 0
+	height: 32px
+	width: 42px
+	background-color: transparent
+	border: none
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/search.svg')
+
+
+
+.cart-link
+	display: block
+	width: 20px
+	height: 20px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/cart.svg')
+	margin-left: 46px
+.login
+	text-transform: uppercase
+	font-size: 12px
+	font-weight: 600
+	color: white
+	&:hover
+		color: $accent
+		text-decoration: none
+.cat-btn
+	width: 106px
+	height: 32px
+	background-color: $accent
+	border-radius: 2px
+	color: white
+	font-size: 12px
+	text-transform: uppercase
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	padding-left: 14px
+	margin-left: 71px
+	cursor: pointer
+
+	&:before
+		content: ''
+		display: block
+		width: 15px
+		height: 13px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/burger.svg')
+		position: absolute
+		left: 10px
+		top: 10px
+
+.cat-btn--active
+	&:before
+		background-image: url('../img/icons/catclose.svg')
+		width: 32px
+		height: 32px
+		left: 0px
+		top: 0px
+.brands-btn
+	font-size: 12px
+	text-transform: uppercase
+	font-weight: 600
+	margin-left: 26px
+	cursor: pointer
+
+
+.our-triggers
+	background-color: #BA301F
+	padding-bottom: 26px
+	padding-top: 26px
+	position: relative
+	color: white
+	z-index: 1
+	background-image: url('../img/icons/trugbg.jpg')
+	background-repeat: no-repeat
+	background-position: left top
+
+
+
+
+
+.our-triggers_top
+	display: flex
+	align-items: center
+.our-triggers_logo
+	text-align: right
+	width: 40%
+	text-transform: uppercase
+	font-size: 20px
+	font-weight: 500
+	font-family: RobotoCon
+	margin-right: 43px
+.our-triggers_logo-img
+	width: 100%
+	height: 47px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/alternovabig.svg')
+
+
+.our-triggers_text-head
+	font-size: 26px
+	font-weight: 700
+	font-family: RobotoCon
+.our-triggers_text-p
+	font-size: 18px
+	font-family: RobotoCon
+	font-weight: 300
+
+.wrap-trig
+	display: flex
+	justify-content: space-between
+	margin-top: 43px
+
+
+.trig-item_num
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	border: 1px solid rgba(255, 255, 255, 0.5)
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 20px
+	font-weight: 500
+	position: absolute
+	left: 0
+	top: 0
+.trig-item
+	display: flex
+	position: relative
+	padding-left: 70px
+	padding-right: 30px
+
+.trig-item_text
+	font-size: 16px
+	font-weight: 500
+	line-height: 24px
+
+
+.main-cat
+	padding-top: 115px
+	.descrip
+		margin-top: 30px
+		line-height: 1.1
+	.section-head_item-red
+		line-height: 1.2
+	.section-head_item-blue
+		line-height: 1.2
+
+
+.cat-wrap
+	display: flex
+	flex-wrap: wrap
+	margin-top: 50px
+	margin-bottom: 60px
+
+
+.cat-item
+	width: 263px
+	height: 145px
+	border: 1px solid #F2F2F2
+	border-radius: 3px
+	transition: box-shadow .3s
+	cursor: pointer
+	background-repeat: no-repeat
+	background-position: right center
+	margin-right: 20px
+	padding-left: 19px
+	padding-top: 15px
+	margin-bottom: 20px
+	position: relative
+	&:hover
+		box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.05)
+		text-decoration: none
+	&:nth-child(4n + 4)
+		margin-right: 0
+
+.cat-item_arrow
+	width: 23px
+	height: 2px
+	background-color: $accent
+	position: absolute
+	transition: width .3s
+	top: 80px
+	&:after
+		content: ''
+		display: block
+		width: 18px
+		height: 18px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/rightcat.svg')
+		position: absolute
+		top: calc(50% - 9px)
+		right: -3px
+
+.cat-item
+	&:hover
+		.cat-item_arrow
+			width: 40px
+.cat-item_head
+	color: #2F3D56
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: 700
+	display: block
+	width: 200px
+
+
+.slick-arrow
+	font-size: 0
+	border-radius: 50%
+	width: 50px
+	height: 50px
+	background-color: white
+	background-position: center
+	background-repeat: no-repeat
+	border: none
+	box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.05)
+
+.slick-next
+	background-image: url('../img/icons/slider-right.svg')
+
+.video-slider
+	margin-top: 150px
+	margin-right: -20px
+	background-color:  #FAFAFA
+	position: relative
+	padding-top: 60px
+	.slick-prev
+		display: none !important
+	.slick-next
+		position: absolute
+		right: -15px
+		top: calc(50% - 25px)
+	.slick-list
+		overflow: visible
+	.slick-active
+		opacity: 1
+	&:before
+		content: ''
+		display: block
+		width: 100%
+		height: 52px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		background-image: url('../img/icons/insttop.svg')
+		position: absolute
+		top: -52px
+
+
+.video-slider-item-wrap
+	margin-right: 20px
+	transition: opacity .3s
+	opacity: 0
+	margin-right: 20px
+	border-radius: 10px
+	overflow: hidden
+
+.video-slider-item
+	width: 269px
+	height: 390px
+	border-radius: 3px
+	position: relative
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	align-items: flex-end
+	padding-left: 20px
+	padding-bottom: 20px
+	padding-right: 20px
+	&:hover
+		color: white
+		text-decoration: none
+
+
+.video-slider-item_mask
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+	border-radius: 3px
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(90, 6, 6, 0.8) 100%)
+	z-index: 1
+	padding-top: 41px
+
+	transition: background .3s
+
+
+.video-slider-item_mask-content
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding-left: 22px
+	padding-right: 22px
+	opacity: 0
+	transition: opacity .3s
+	pointer-events: none
+
+.video-slider-wrap
+	margin-top: 40px
+
+.video-slider-item
+	&:hover
+		.video-slider-item_mask
+			background: rgba(0, 0, 0, 0.6)
+		.video-slider-item_mask-content
+			pointer-events: auto
+			opacity: 1
+		.video-slider-item_text
+			z-index: 1
+
+.video-slider-item_text
+	color: white
+	font-size: 18px
+	font-weight: 700
+	position: relative
+	z-index: 2
+.video-slider-item_text-center
+	text-align: center
+	margin-bottom: 38px
+	padding-top: 30px
+
+.video-slider-item_mask-logo
+	width: 70px
+	height: 70px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	margin-bottom: 50px
+.inst-wrap
+	color: white
+	font-weight: 600
+	margin-bottom: 70px
+	position: relative
+	padding-left: 35px
+	&:hover
+		text-decoration: none
+		color: white
+		text-decoration: none
+	&:before
+		content: ""
+		display: block
+		width: 22px
+		height: 22px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/instsvg.svg')
+		position: absolute
+		left: 0px
+		top: calc(50% - 11px)
+
+.video-slider-item--red
+	background-color: #B02E1E
+	background-size: contain
+	background-size: 250px
+	background-position: center right
+	.video-slider-item_mask
+		background: none
+
+	.video-slider-item_mask-content
+		opacity: 1
+		pointer-events: auto
+
+.video-logo-comp
+	width: 218px
+	height: 22px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	background-image: url('../img/icons/alternovabig.svg')
+
+.wrap-all_movie
+	text-align: right
+	padding-right: 15px
+
+.all_movie-link
+	color: $accent
+	&:hover
+		color: $accent
+		text-decoration: none
+
+
+.inst-block
+	background-color: #FAFAFA
+	.container
+		display: flex
+		justify-content: center
+
+
+
+.inst-block
+	padding-top: 53px
+	padding-bottom: 135px
+.inst-libk-wrap_text
+	font-size: 18px
+
+.inst-libk-wrap
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+.inst-libk-wrap_text
+	margin-bottom: 10px
+
+
+.section-head-center
+	text-align: center
+	.descrip
+		text-align: center
+		width: auto
+.reduction
+	padding-top: 50px
+	padding-bottom: 50px
+	background-color: #ECEFF1
+	position: relative
+	margin-bottom: 100px
+	z-index: 1
+	&:before
+		content: ''
+		display: block
+		width: 100%
+		height: 190px
+		position: absolute
+		top: -130px
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		background-image: url('../img/icons/bgtop.svg')
+		z-index: -1
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		width: 100%
+		height: 190px
+		bottom: -105px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/bgbot.svg')
+		z-index: -1
+
+
+.reduction-content_head
+	font-size: 20px
+	font-style: italic
+	font-weight: bold
+	color: #9E9E9E
+	margin-bottom: 10px
+.reduction-item
+	display: flex
+	margin-bottom: 70px
+.reduction-item
+	&:nth-child(even)
+		.reduction-content
+			padding-left: 50px
+		.reduction-content_item
+			align-items: center
+
+.reduction-item_img
+	width: 50%
+	height: 475px
+	position: relative
+.reduction-item_img-inner
+	width: 100%
+	height: 100%
+	position: absolute
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+.reduction-item_img-1
+	left: -100px
+.reduction-item_img-2
+	right: -100px
+.reduction
+	.section-head-center
+		margin-bottom: 80px
+
+
+.reduction-content_item
+	padding-top: 10px
+	padding-bottom: 10px
+	display: flex
+	align-items: flex-start
+	margin-bottom: 10px
+.reduction-content_item-green
+	.reduction-content_item-text-head
+		color: #95AC8F
+
+.reduction-content_item-icon
+	width: 36px
+	height: 36px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	margin-right: 20px
+
+.reduction-content_item-text
+	max-width: 350px
+.reduction-content_item-text-head
+	font-size: 18px
+	font-weight: 700
+	color: $accent
+	line-height: 1.2
+
+.reduction-content_item-text-descrip
+	font-style: italic
+	font-size: 16px
+	color: #7C7C7C
+
+
+
+.alternovared-logo
+	width: 315px
+	height: 32px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/alternovared.svg')
+	margin-left: 15px
+
+.section-head_item-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-bottom: 15px
+
+.descrip-con-green
+	color: #95AC8F
+	font-size: 26px
+	font-family: RobotoCon
+	text-transform: uppercase
+	margin-bottom: 5px
+	font-weight: 300
+.reduction
+	.descrip-con-red
+		color: $accent
+		text-transform: uppercase
+		font-family: RobotoCon
+		font-size: 44px
+		font-weight: 700
+
+
+.man-around
+	display: flex
+	justify-content: center
+
+.man-around_block
+	width: 497px
+	height: 444px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/pacan.png')
+	background-size: contain
+	position: relative
+
+.man-around
+	.arrow
+		position: absolute
+		&:after
+			content: ''
+			display: block
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+
+.arrow-1
+	&:after
+		content: ''
+		width: 177px
+		height: 135px
+		background-image: url('../img/icons/arrow1.svg')
+
+
+
+.banner-wrap
+	display: flex
+	align-items: center
+	flex-direction: column
+	.banner
+		margin-bottom: 70px
+	.big-btn-2
+		margin-bottom: 28px
+.banner
+	width: 97%
+	height: 444px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	background-image: url('../img/banner.png')
+.banne-bottom_links
+	text-align: center
+
+.banne-bottom_links-text
+	font-size: 26px
+	color: #95AC8F
+	margin-bottom: 30px
+.banne-bottom_links-link
+	color: #2D9CDB
+	&:hover
+		color: #2D9CDB
+		text-decoration: none
+
+.call-us-slider-wrap-head
+	padding-top: 30px
+.call-us-slider-wrap
+	padding-top: 40px
+	padding-bottom: 89px
+	.container
+		display: flex
+	.slick-next
+		background-image: url('../img/icons/slider-right-gray.svg')
+		transition: background-image .3s
+		&:hover
+			background-image: url('../img/icons/slider-right.svg')
+	.slick-prev
+		background-image: url('../img/icons/prevgray.svg')
+		transition: background-image .3s
+		&:hover
+			background-image: url('../img/icons/prevred.svg')
+.call-us-slider
+	width: 52%
+	position: relative
+	.slick-arrow
+		position: absolute
+		bottom: 21px
+		z-index: 1
+	.slick-next
+		right: 20px
+	.slick-prev
+		right: 85px
+		background-image: url('../img/icons/prevgray.svg')
+
+.call-us-slider_item
+	height: 612px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+.call-us-slider-content
+	background-color: #FAFAFA
+	padding-left: 71px
+	padding-right: 71px
+	width: 48%
+	padding-top: 60px
+	padding-bottom: 60px
+	.section-head_item-blue
+		margin-bottom: 30px
+	.custom-ul
+		margin-bottom: 30px
+	.btn305w
+		margin-top: 36px
+	.custom-ul 
+		.custom-li
+			&:before
+				top: 10px
+				width: 5px
+				height: 5px
+.call-us-slider-content_link-wrap
+	padding-left: 60px
+	position: relative
+	margin-bottom: 36px
+	&:before
+		content: ''
+		display: block
+		width: 42px
+		height: 36px
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		background-image: url('../img/icons/homeicon.svg')
+		left: 0
+		top: calc(50% - 31px / 2)
+.call-us-slider-content_link-text
+	display: block
+	color: #4F4F4F
+	font-weight: 600
+	font-size: 18px
+	margin-bottom: 6px
+
+.call-us-slider-content_link-link
+	color: $accent
+	font-size: 15px
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 17px
+		height: 8px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/rightsmallred.svg')
+		position: absolute
+		right: -30px
+		top: calc(50% - 2px)
+	&:hover
+		color: $accent
+		text-decoration: none
+
+.big-red-phone
+	color: $accent
+	font-size: 26px
+	font-weight: 900
+	&:hover
+		color: $accent
+		text-decoration: none
+
+
+
+
+
+.blog-slider-wrap
+	padding-bottom: 98px
+.blog-slider-wrap-inner
+	padding-bottom: 0
+.blog-slider_item
+	width: 296px
+	min-height: 370px
+	display: block
+	color: inherit
+	margin-right: 24px
+	&:hover
+		color: inherit
+		text-decoration: none
+		box-shadow: 0px 4px 20px rgba(103, 129, 177, 0.08)
+		.blog-slider_item-btn
+			opacity: 1
+.blog-slider_item_img
+	width: 100%
+	height: 174px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	margin-bottom: 10px
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+.blog-slider_item_text
+	padding-left: 10px
+	padding-right: 10px
+	padding-bottom: 10px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	min-height: calc(100% - 174px)
+.blog-slider_item-btn
+	width: 112px
+	height: 45px
+	border: 1px solid $accent
+	border-radius: 5px
+	color: $accent
+	font-weight: 600
+	display: flex
+	align-items: center
+	line-height: 0
+	padding-bottom: 2px
+	padding-left: 18px
+	position: relative
+	opacity: 0
+	transition: opacity .3s
+	margin-top: 15px
+	&:after
+		content: ''
+		display: block
+		width: 17px
+		height: 8px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/rightsmallred.svg')
+		position: absolute
+		right: 18px
+		top: calc(50% - 4px)
+.blog-slider
+	margin-bottom: 30px
+	.slick-prev
+		display: none !important
+	.slick-next
+		width: 110px
+		height: 59px
+		background-image: url('../img/icons/longrightred.svg')
+		border-radius: 0
+		box-shadow: none
+		position: absolute
+		right: 0
+		bottom: 0
+		background-color: transparent
+
+.blog-slider-arrow-wrap
+	display: flex
+	justify-content: flex-end
+	background-color: green
+
+.big-form
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/formbg.jpg')
+	background-size: cover
+	.container
+		min-height: 693px
+		padding-top: 90px
+		padding-bottom: 90px
+		text-align: center
+		color: white
+
+.big-form_small-head
+	font-size: 26px
+	font-weight: 600
+	margin-bottom: 20px
+.big-form_small-text
+	font-size: 20px
+	padding-left: 150px
+	padding-right: 150px
+	margin-bottom: 60px
+.big-form_big-head
+	font-family: RobotoCon
+	font-size: 30px
+	font-weight: 700
+	text-transform: uppercase
+	margin-bottom: 55px
+.big-form
+	form
+		display: flex
+		flex-direction: column
+		align-items: center
+	.clear-input
+		width: 14px
+		height: 14px
+		background-position: center
+		background-repeat: no-repeat
+		background-position: center
+		background-image: url('../img/icons/clearinput.svg')
+		position: absolute
+		top: 27px
+		cursor: pointer
+		right: 20px
+	.input
+		width: 686px
+		height: 66px
+		border: none
+		border-radius: 3px
+		margin-bottom: 20px
+		padding-left: 26px
+		padding-right: 40px
+		color: #5A7889
+		border: 2px solid #99CFEE
+	.btn
+		margin-top: 50px
+
+.wrap-input
+	position: relative
+.placeholder
+	position: absolute
+	color: #C0C7D6
+	font-size: 13px
+	top: calc(27%)
+	left: 26px
+	transition: top .3s
+.wrap-input--active
+	.placeholder
+		top: 10px
+	.input
+		padding-top: 10px
+.text-block
+	font-size: 12px
+	color: #828282
+	line-height: 16px
+	padding-top: 50px
+	padding-bottom: 50px
+.text-block_head
+	font-size: 12px
+	font-weight: 700
+	color: #C4C4C4
+	margin-bottom: 15px
+.custom-ul-triangle
+	padding-left: 0
+.custom-li-triangle
+	list-style-type: none
+.text-block_p
+	margin-bottom: 15px
+
+.footer-top
+	padding-top: 54px
+	padding-bottom: 54px
+	background-color: #FAFAFA
+	.container
+		display: flex
+		justify-content: space-between
+.footer-top-col
+	display: flex
+	flex-direction: column
+	.footer-top-col_link
+		display: inline-block
+.footer-top-col_link-wrap
+	margin-bottom: 10px
+	&:nth-child(1)
+		.footer-top-col_link
+			font-weight: 700
+.footer-top-col_link-wrap
+	.footer-top-col_link
+		font-size: 16px
+		color: #7C7C7C
+		&:hover
+			text-decoration: none
+			color: $accent
+.footer-phone-wrap
+	margin-bottom: 3px
+.footer-phone
+	color: #4F4F4F
+	font-weight: 700
+	font-size: 20px
+	&:hover
+		color: #4F4F4F
+		text-decoration: none
+
+.footer-all-contact_link
+	font-size: 12px
+	color: #2D9CDB
+
+.footer-time-work-today
+	padding-left: 15px
+	position: relative
+	margin-bottom: 14px
+.footer-mail-top
+	font-size: 12px
+	color: #979797
+	margin-bottom: 10px
+
+.wrap-mail
+	margin-bottom: 10px
+.footer-mail-link
+	font-size: 20px
+	color: #4F4F4F
+	&:hover
+		color: #4F4F4F
+		text-decoration: none
+.time-work_around
+	position: absolute
+	left: 0
+	width: 6px
+	height: 6px
+	border-radius: 50%
+	background-color: #27AE60
+	left: 0
+	top: 11px
+.footer-time-work_text
+	font-size: 12px
+	font-weight: 600
+
+.footer-time-work
+	display: flex
+	flex-direction: column
+	margin-bottom: 10px
+	span
+		color: #7C7C7C
+		font-size: 12px
+		margin-bottom: 10px
+
+.link-blue-right
+	position: relative
+	&:after
+		content: ''
+		display: block
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/rightblue.svg')
+		width: 6px
+		height: 9px
+		position: absolute
+		right: -10px
+		top: 6px
+
+
+.footer-adress
+	border-top: 1px solid #F3F3F3
+	border-bottom: 1px solid #F3F3F3
+	.container
+		height: 47px
+		display: flex
+		align-items: center
+		justify-content: space-between
+.footer-adress_text
+	color: #A9A9A9
+	font-size: 14px
+	margin-right: 10px
+.link-blue-right
+	font-size: 12px
+	color: #2D9CDB
+	&:hover
+		color: #2D9CDB
+		text-decoration: none
+
+.footer-adress_social-item
+	display: block
+	width: 24px
+	height: 24px
+	background-position: center
+	background-repeat: no-repeat
+	margin-right: 28px
+	&:last-child
+		margin-right: 0
+
+.footer-adress_right
+	display: flex
+	align-items: center
+	height: 100%
+.footer-adress_left
+	display: flex
+	height: 100%
+	align-items: center
+.footer-nav
+	background-color: #F3F3F3
+	nav
+		display: flex
+		align-items: center
+		padding-top: 35px
+		padding-bottom: 35px
+.footer-nav_item
+	font-size: 12px
+	font-weight: 600
+	color: #A9A9A9
+	margin-right: 40px
+	&:hover
+		text-decoration: none
+
+.footer-bottom
+	background-color: #F3F3F3
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 25px
+		padding-top: 25px
+.footer-bottom_text
+	font-size: 12px
+	color: #A9A9A9
+
+// catalog
+.inner-page_main-screen-cat-item
+	.inner-page_main-screen-img
+		background-position: bottom
+.inner-page_main-screen-content_trig-wrap
+	display: flex
+	.big-trig-item
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+.big-trig-item
+	display: block
+	height: 39px
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 3px
+	padding-left: 35px
+	padding-right: 10px
+	color: $text
+	position: relative
+	&:hover
+		text-decoration: none
+	&:before
+		content: ''
+		display: block
+		width: 16px
+		height: 16px
+		position: absolute
+		top: calc(50% - 7px)
+		background-position: center
+		background-repeat: no-repeat
+		left: 10px
+
+.big-trig-item-sale
+	border: 1px solid #F2994A
+	color: #F2994A
+	background-color: rgba(255, 255, 255, 0.7)
+	&:hover
+		color: #F2994A
+	&:before
+		background-image: url('../img/icons/percent.svg')
+
+.big-trig-item-new
+	border: 1px solid #52B467
+	color: #52B467
+	&:hover
+		color: #52B467
+	&:before
+		background-image: url('../img/icons/kub.svg')
+
+.big-trig-item-populare
+	border: 1px solid #2D9CDB
+	background: rgba(45, 156, 219, 0.1)
+	color: #2D9CDB
+	&:hover
+		color: #2D9CDB
+	&:before
+		background-image: url('../img/icons/shield.svg')
+.inner-page_main-screen
+	height: 363px
+	background-color: #FAFAFA
+	.container
+		display: flex
+		height: 100%
+.inner-page_main-screen-img
+	width: 50%
+	background-repeat: no-repeat
+	background-position: bottom
+	background-image: url('../img/scatalogimg.png')
+.inner-page_main-screen-content
+	width: 50%
+	width: 468px
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+.inner-page_main-screen-content_head
+	font-size: 32px
+	color: #4F4F4F
+	font-weight: 700
+	margin-bottom: 20px
+.inner-page_main-screen.inner-page_main-screen-red
+	height: 422px
+.inner-page_main-screen-red
+	background-color: #EB5757
+	.inner-page_main-screen-content_head
+		color: white
+		line-height: 1.2
+		margin-bottom: 10px
+	.inner-page_main-screen-content
+		color: white
+	.inner-page_main-screen-img
+		background-position: center
+	.opacity-btn
+		width: 145px
+		height: 41px
+		border-radius: 3px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 10px
+		&:hover
+
+			text-decoration: none
+.catalog-wrap
+	margin-top: -50px
+	.container
+		display: flex
+		flex-wrap: wrap
+.catalog-item
+	width: calc(50% - 5px)
+	margin-right: 10px
+	margin-bottom: 10px
+	border: 1px solid #F2F2F2
+	border-radius: 3px
+	min-height: 270px
+	position: relative
+	display: flex
+	background-color: #fff
+	padding-top: 15px
+	padding-bottom: 15px
+	flex-direction: row
+	justify-content: flex-start
+	.catalog-item_image
+		width: 230px
+		height: 100%
+		background-position: center
+		background-repeat: no-repeat
+	.catalog-item_content
+		width: calc(100% - 230px)
+		padding-top: 15px
+		padding-bottom: 15px
+		padding-right: 10px
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+	.catalog-item_head
+		padding-left: 0px
+	&:nth-child(2n + 2)
+		margin-right: 0
+
+.catalog-item_more-arrow
+	position: absolute
+	display: block
+	width: 38px
+	height: 30px
+	right: 25px
+	bottom: 10px
+	background-position: right center
+	align-items: center
+	background-repeat: no-repeat
+	justify-content: center
+	background-image: url('../img/icons/redright.svg')
+	&:hover
+		background-image: url('../img/icons/rightredlong.svg')
+		
+
+	
+	
+.catalog-item_link-wrap
+	column-count: 2
+	margin-bottom: 15px
+
+.catalog-item_link-container
+	padding-right: 6px
+	line-height: 12px
+	margin-bottom: 10px
+.catalog-item_link
+	font-size: 13px
+	color: #828282
+	line-height: 1.4
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 13px
+		height: 8px
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		bottom: 2px
+		right: -20px
+		pointer-events: none
+	&:hover
+		color: $accent
+		text-decoration: none
+		&:after
+			background-image: url('../img/icons/redright.svg')
+
+.catalog-item_show-more_link
+	color: $accent
+	font-size: 11px
+	font-weight: 700
+	position: relative
+	&:hover
+		color: $accent
+		text-decoration: none
+	&:after
+		content: ''
+		display: block
+		width: 4px
+		height: 8px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/rightgalka.svg')
+		position: absolute
+		top: 5px
+		right: -14px
+
+.catalog-item_top
+	margin-bottom: 27px
+.catalog-item_stikers
+	display: flex
+	margin-top: 5px
+
+.catalog-item_stiker
+	display: block
+	width: 68px
+	height: 16px
+	background-position: center
+	background-repeat: no-repeat
+	margin-right: 5px
+	&:last-child
+		margin-right: 0
+.sale-stick
+	background-image: url('../img/icons/salestick.svg')
+.new-stick
+	background-image: url('../img/icons/newstick.svg')
+.catalog-item_head
+	text-transform: uppercase
+	font-size: 14px
+	margin-bottom: 0
+
+.goods-slider-wrap
+	margin-bottom: 40px
+
+.goods-slider
+	margin-right: -10px
+	position: relative
+	.slick-next
+		position: absolute
+		top: calc(50% - 25px)
+		right: -15px
+	.slick-prev
+		display: none !important
+.good-slider_inner-page
+	.goods-slider
+		.slick-prev
+			display: block !important
+
+.goods-slider-var, .good-slider_inner-page .goods-slider
+	margin-right: -10px
+	position: relative
+	.slick-next
+		position: absolute
+		top: calc(50% - 25px)
+		right: -15px
+	.slick-prev
+		position: absolute
+		top: calc(50% - 25px)
+		left: -15px
+		background-image: url('../img/icons/prevred.svg')
+		z-index: 1
+
+.goods_item
+	transition: box-shadow .3s, border-color
+	&:hover
+		box-shadow: 0 4px 20px rgba(103,129,177,.08)
+		border-color: transition
+.goods_item-buy
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	color: white
+	font-size: 14px
+	border-radius: 3px
+	transition: .3s
+	background-color: $accent
+	border: 1px solid transparent
+	height: 32px
+	margin-top: 13px
+	&:hover
+		background-color: white
+		color: $text
+		border: 1px solid $accent
+		color: $accent
+		text-decoration: none
+
+.goods_item-spec
+	font-size: 14px
+.goods_item-spec-text
+	color: $text
+.goods_item-spec-name
+	color: #C4C4C4
+.goods_item
+	width: 198px
+	margin-right: 10px
+	background-color: white
+.goods_item_image
+	width: 100%
+	height: 198px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+.goods_item_price
+	font-size: 18px
+	color: #2F3D56
+	font-weight: 700
+.goods_item_name
+	font-size: 14px
+	font-weight: 600
+	color: #2D9CDB
+	line-height: 20px
+	display: block
+	&:hover
+		color: #2D9CDB
+.goods_item_cat
+	font-size: 11px
+	color: #7C7C7C
+	&:hover
+		text-decoration: none
+		color: $accent
+.goods_item-content
+	padding-top: 15px
+	padding-left: 15px
+	padding-right: 15px
+	padding-bottom: 15px
+	border: 1px solid #F2F2F2
+	border-top: 1px solid transparent
+	border-radius: 3px
+
+.new-price
+	color: $accent
+.old-price
+	color: #828282
+	font-size: 14px
+	text-decoration-line: line-through
+	font-weight: 300
+.inner-page_section-head
+	font-size: 24px
+	font-weight: 700
+	margin-bottom: 20px
+.inner-blog-slider
+	margin-right: -20px
+	position: relative
+
+.inner-blog-slider_item-img
+	width: 100%
+	height: 184px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+.inner-blog-slider_item
+	width: 544px
+	margin-right: 20px
+.inner-blog-slider_item-head
+	font-size: 18px
+	font-weight: bold
+	line-height: 23px
+	margin-bottom: 7px
+.inner-blog-slider_item-content
+	padding-left: 18px
+	padding-right: 18px
+	padding-bottom: 25px
+	padding-top: 25px
+	border: 1px solid #f2f2f2
+	border-top: 1px solid transparent
+	border-radius: 3px
+
+.inner-blog-slider_item-text
+	font-size: 14px
+	color: #828282
+.inner-blog-slider_item-more
+	color: #2D9CDB
+	font-size: 12px
+	&:hover
+		text-decoration: none
+		color: $accent
+
+//contact
+.contact-info
+	margin-bottom: 30px
+.contact-info_item
+	font-size: 14px
+	position: relative
+	padding-left: 33px
+	margin-bottom: 10px
+	&:before
+		content: ''
+		display: block
+		width: 20px
+		height: 20px
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		left: 0
+		top: calc(50% - 10px)
+
+.contact-info_item-adres
+	color: #2D9CDB
+.contact-info_item-link
+	color: $text
+	&:hover
+		color: $accent
+.contact-info_item-phone
+	&:before
+		background-image: url('../img/icons/cont1.svg')
+.contact-info_item-adres-wrap
+	&:before
+		background-image: url('../img/icons/cont2.svg')
+.contact-info_item-time-wrap
+	&:before
+		background-image: url('../img/icons/cont3.svg')
+.contact-info_item-time
+	margin-right: 20px
+
+.important-block--red
+	width: 100%
+	padding-top: 15px
+	padding-bottom: 15px
+	padding-right: 20px
+	padding-left: 50px
+	position: relative
+	background-color: #FFEEEE
+	border: 1px solid #EEE3E3
+	margin-bottom: 30px
+	&:before
+		content: ''
+		display: block
+		width: 25px
+		height: 25px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/filered.svg')
+		position: absolute
+		left: 12px
+		top: 14px
+
+.contact-content
+	.container
+		display: flex
+.contact-content-item
+	width: 55%
+	padding-right: 70px
+	.text-small-h.text-small-h-16
+		margin-bottom: 10px
+	.section-row
+		margin-bottom: 55px
+.contact-content-item.form-wrap
+	width: 45%
+	padding-right: 0
+	padding-left: 70px
+	border-left: 1px solid #F2F2F2
+
+.serv-content
+	.text-block
+		padding-bottom: 0
+		padding-top: 20px
+.form-wrap-serv
+	padding-left: 70px
+
+.important-block--red_head
+	font-size: 14px
+	color: #886060
+	font-weight: 700
+.important-block--red_text
+	color: #886060
+	font-size: 12px
+.link-dashed
+	font-size: 14px
+	color: #2D9CDB
+	padding-bottom: 4px
+	border-bottom: 1px dashed #2D9CDB
+	&:hover
+		text-decoration: none
+.link-dashed-wrap
+	margin-bottom: 10px
+.rekv-item
+	font-size: 14px
+	margin-bottom: 15px
+.rekv-bold
+	font-weight: 700
+	color:  #A9A9A9
+.contact-map
+	height: 712px
+	iframe
+		width: 100%
+		height: 100%
+		border: none
+@media (max-width: 910px)
+	.contact-form_mobile-btn
+		display: block
+		.btn-red
+			background: transparent
+			border: 1px solid $accent
+			color: $accent
+			font-weight: 700
+			&:hover
+				color: white
+				background-color: $accent
+	.contact-content
+		.container
+			display: block
+	.contact-content-item
+		width: 100%
+		padding-right: 0px
+	.contact-content-item.form-wrap
+		padding-left: 0
+		display: none	
+@media (max-width: 502px)
+	.contact-info_item-time-wrap
+		display: flex
+		flex-direction: column
+		&:before
+			top: 2px
+//contact
+
+
+@media (max-width: 1221px)
+	.goods-slider
+		.slick-next
+			right: 20px
+	.goods-slider-var, .good-slider_inner-page .goods-slider
+		.slick-next
+			right: 20px
+		.slick-prev
+			left: 20px
+@media (max-width: 948px)
+	.catalog-item
+		width: 100%
+		margin-right: 0 !important
+		
+
+@media (max-width: 894px)
+	.inner-page_main-screen
+		height: 300px
+	.inner-page_main-screen-img
+		background-position: bottom
+		background-size: contain
+	.catalog-wrap
+		margin-top: 20px
+	.inner-page_main-screen-red
+		.container
+			flex-direction: row-reverse
+		.inner-page_main-screen-content_p
+			display: none
+		.inner-page_main-screen-content_head
+
+		.inner-page_main-screen-content
+			padding-left: 10%
+	.inner-page_main-screen-cat-item
+		height: auto
+		.inner-page_main-screen-content
+			padding-top: 30px
+			padding-bottom: 30px
+
+		.inner-page_main-screen-content_trig-wrap
+			flex-wrap: wrap
+			.big-trig-item
+				margin-bottom: 10px
+		.inner-page_main-screen-content
+			width: 50%
+@media (max-width: 766px)
+	.inner-page_main-screen-cat-item
+		.inner-page_main-screen-img
+			display: none
+		.inner-page_main-screen-content
+			width: 100%
+@media (max-width: 692px)
+	.inner-page_main-screen-img
+		display: none
+	.inner-page_main-screen-content
+		width: 100%
+	.inner-page_main-screen-red
+		.inner-page_main-screen-img
+			display: block
+@media (max-width: 500px)
+	.job-input_radio-input
+		margin-right: 17px
+	.job-popup
+		border-radius: 0px
+	.catalog-item_show-more_link
+		font-size: 0
+		display: block
+		width: 24px
+		height: 8px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/catright.svg')
+		&:after
+			display: none
+	.inner-page_main-screen-red
+		height: 148px
+		background-color: #fff
+		.container
+			background-color: #EB5757
+			padding-left: 0
+			padding-right: 0
+			margin-left: 15px
+			margin-right: 15px
+			border-radius: 3px
+			padding-left: 20px
+		.inner-page_main-screen-content
+			padding-left: 0
+		.inner-page_main-screen-content_head
+			font-size: 14px
+		.opacity-btn
+			width: 107px
+			height: 30px
+			font-size: 12px
+
+	.catalog-item
+		display: flex
+		flex-direction: row-reverse
+		padding-left: 10px
+		min-height: 150px
+		.catalog-item_image
+			background-size: 60%
+			background-position: right
+			width: 140px
+		.catalog-item_content
+			width: calc(100% - 140px)
+	.catalog-item_link-wrap
+		display: none
+	.catalog-item_content
+		justify-content: center !important
+
+@media (max-width: 398px)
+	.inner-page_main-screen
+		display: none
+	.inner-page_main-screen-red
+		display: block
+	.inner-page_main-screen-cat-item
+		display: block
+
+//catalogend
+
+
+//delevery
+.dev-inf
+	margin-top: 30px
+	margin-bottom: 30px
+	display: flex
+.dev-inf_map
+	width: 53%
+	margin-right: 30px
+	iframe
+		border: none
+.dev-inf_content
+	width: calc(47% - 30px)
+	background-color: #FAFAFA
+	border: 1px solid #F2F2F2
+	border-radius: 3px
+	padding-left: 74px
+	padding-right: 40px
+	padding-top: 40px
+	padding-bottom: 40px
+	font-size: 16px
+	color: #4F4F4F
+.dev-inf_content-head
+	font-size: 18px
+	font-weight: 700
+	color: #4F4F4F
+	position: relative
+	margin-bottom: 15px
+.dev-inf_content-head-with-icon
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 20px
+		height: 24px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/bigplace.svg')
+		left: -27px
+		top: calc(50% - 12px)
+.dev-inf_content-descp
+	color: #C4C4C4
+	font-size: 14px
+	margin-bottom: 25px
+.wrap-inf_dev
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+
+.dev-inf_content-text
+	margin-right: 10px
+
+.dev-inf_content-text-bg
+	background-color: #FFCA41
+	font-weight: bold
+	padding-left: 10px
+	padding-right: 10px
+	padding-top: 10px
+	padding-bottom: 10px
+	border-radius: 3px
+
+
+.dev-inf_content-text-red
+	font-size: 12px
+	color: $accent
+	font-weight: 600
+	margin-top: 10px
+	margin-bottom: 20px
+	span
+		display: block
+.wrap-inf_time-head
+	font-size: 16px
+	color: #A9A9A9
+	font-weight: 700
+	margin-top: 20px
+	margin-bottom: 20px
+.wrap-inf_time-col
+	column-count: 2
+	span
+		display: inline-block
+		margin-bottom: 10px
+
+.wrap-inf_gray-text
+	font-size: 14px
+	color: #A9A9A9
+	font-weight: 600
+	margin-top: 10px
+	margin-bottom: 20px
+
+.dev-inf-btn
+	width: 250px
+.descript-cart
+	margin-bottom: 30px
+
+
+.dev-way_item-name
+	position: relative
+	padding-left: 40px
+	color: $text
+	margin-bottom: 20px
+	span
+		font-size: 16px
+		font-weight: 600
+
+.dev-way_item-num
+	width: 30px
+	height: 30px
+	background-color: $accent
+	color: white
+	font-weight: 600
+	font-size: 14px
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 50%
+	position: absolute
+	left: 0
+	top: calc(50% - 15px)
+
+.dev-way-row
+	display: flex
+	justify-content: space-between
+	margin-bottom: 50px
+
+.dev-way_descrip
+	font-size: 14px
+	color: #4F4F4F
+	margin-bottom: 10px
+	.span-red
+		color: $accent
+		font-weight: 700
+
+.dev-way_item-name-gray
+	font-size: 16px
+	font-weight: 600
+	margin-bottom: 10px
+	color: #C4C4C4
+.dev-way-item
+	width: 300px
+	font-size: 16px
+	color: $text
+
+.wrap-inf_time-col
+	span
+		display: block
+
+.wrap-dev_trig
+	display: flex
+	margin-top: 30px
+
+.dev_trig-item
+	width: 50%
+	padding-right: 20px
+	&:last-child
+		padding-right: 0px
+	.text-small-h
+		position: relative
+		padding-left: 40px
+		margin-bottom: 15px
+	.dev_trig-icon
+		width: 22px
+		height: 22px
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		left: 0
+		top: calc(50% - 11px)
+
+.section-row
+	margin-bottom: 30px
+//develeryend
+
+
+//sort
+
+.jq-selectbox.opened
+	.jq-selectbox__dropdown
+		li
+			&:first-child
+				display: none
+.jq-selectbox__select-text
+	color: #2D9CDB
+	font-size: 14px
+	width: auto !important
+	&:after
+		content: ''
+		display: block
+		width: 12px
+		height: 8px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/sortbot.svg')
+		position: absolute
+		right: -20px
+		top: 7px
+.jq-selectbox__dropdown
+	background-color: white
+	width: 200px 
+	border-radius: 8px
+	box-shadow: 0px 0px 8px rgba(37, 40, 43, 0.12)
+	top: 34px
+	ul
+		padding-left: 0
+		margin-bottom: 0
+	li
+		width: 100%
+		padding-left: 17px
+		height: 50px
+		display: flex
+		align-items: center
+		&:hover
+			background-color: #F8F8F8
+			color: #2D9CDB
+
+
+.reset-filter
+	display: flex
+	align-items: center
+	justify-content: center
+	color: #4F4F4F
+	font-size: 12px
+	border: 1px solid #F2F2F2
+	border-radius: 3px
+	transition: .3s
+	height: 32px
+	&:hover
+		border-color: transparent
+		color: white
+		background-color: $accent
+		text-decoration: none
+.sort-wrap
+	display: flex
+.sort_filter
+	width: 255px
+	span
+		font-size: 12px
+		color: #4F4F4F
+.sort_filter-head
+	font-size: 14px
+	font-weight: 600
+	margin-bottom: 14px
+.sort_filt-price_input
+	width: 103px
+	height: 32px
+	border: 1px solid #E1E0E0
+	border-radius: 1px
+	font-size: 14px
+	padding-left: 8px
+	padding-right: 8px
+	&::placeholder
+		color: #C4C4C4
+
+
+.reset-filters
+	display: flex
+	width: 100%
+	height: 52px
+	border: 1px solid #F2F2F2
+	border-radius: 3px
+	justify-content: center
+	align-items: center
+	color: $text
+	font-weight: 600
+	font-size: 16px
+	transition: .3s
+	&:hover
+		color: white
+		border: 1px solid transparent
+		background-color: $accent
+		text-decoration: none
+.sort_filter-item
+	margin-bottom: 20px
+
+.sort_filter-check_wrap
+	position: relative
+	padding-left: 25px
+	.checkbox-custom
+		position: static
+		position: absolute
+		left: 0
+		background-color: transparent
+		border: 1px solid #E1E0E0
+		margin-bottom: 0
+	.sort_filter-label-text
+		margin-bottom: 0
+		cursor: pointer
+
+	.checkbox-custom-hidd
+		position: static
+		&:checked + .checkbox-custom
+			background-color: #2D9CDB
+			border: none
+.sort_filter-check_wrap--active
+	.search-good-count	
+		display: flex
+.search-good-count	
+	color: #828282
+	font-size: 12px
+	box-shadow: 0px 0px 18px 0px rgba(224,224,224,1)
+	padding-left: 5px
+	padding-right: 5px
+	height: 36px
+	min-width: 144px
+	background-color: #fff
+	display: flex
+	align-items: center
+	justify-content: center
+	top: calc(50% - 36px / 2)
+	right: -50px
+	margin-top: 10px
+	margin-left: -25px
+	margin-bottom: 10px
+	display: none
+
+.sort_filter_show-more
+	color: #2D9CDB
+	font-size: 14px
+	&:hover
+		color: $accent
+		text-decoration: none
+.sort_filter-label-text
+	font-size: 14px
+
+
+.sort-goods-wrap
+	width: calc(100% - 255px)
+	padding-left: 30px
+
+.wrap-sort_filter_btn
+	display: flex
+	border-radius: 3px
+	overflow: hidden
+.sort_filter_btn
+	display: block
+	width: 50%
+	background-color: $accent
+	color: white
+	height: 52px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 16px
+	font-weight: 600
+	&:hover
+		text-decoration: none
+		color: white
+	&:last-child
+		font-size: 12px
+
+.sort-filter_modal
+	width: 100%
+	height: 100%
+	display: none
+	padding-left: 20px
+	padding-right: 20px
+	.sort_filter
+		width: 100%
+
+.sort-goods-top
+	margin-bottom: 16px
+.show-filter_btn
+	width: 25px
+	height: 25px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/filterbtn.svg')
+	display: none
+.show-filter_btn--active
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 10px
+		height: 10px
+		background-color: red
+		border-radius: 50%
+		position: absolute
+		right: -3px
+
+
+.sort-selected_top
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 14px
+.sort-selected_curent
+	display: flex
+	flex-wrap: wrap
+.sort-selected_curent_item
+	font-size: 14px
+	color: #4F4F4F
+	background-color: #FFEFC8
+	margin-right: 6px
+	padding-left: 6px
+	cursor: pointer
+	padding-right: 32px
+	border-radius: 3px
+	min-height: 30px
+	display: flex
+	align-items: center
+	position: relative
+	margin-bottom: 10px
+	&:after
+		content: ''
+		display: block
+		width: 10px
+		height: 10px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/xblack.svg')
+		position: absolute
+		right: 10px
+		top: 11px
+.sort-selected_top-reset
+	color: #2D9CDB
+	font-size: 12px
+	&:hover
+		color: $accent
+.sort-selected_top-text
+	font-size: 14px
+	font-weight: 600
+	color: #4F4F4F
+.sort-goods-v2-noimage
+	.sort-goods-v2_item-left
+		padding-left: 0
+
+.sort-goods-v2_stick
+	display: flex
+	align-items: center
+
+.sort-goods-v2_stick-item
+	display: block
+	width: 24px
+	height: 24px
+	background-position: center
+	background-repeat: no-repeat
+	margin-right: 18px
+	&:last-child
+		margin-right: 0
+.sort-goods-v2_heart
+	background-image: url('../img/icons/serd.svg')
+.sort-goods-v2_rait
+	background-image: url('../img/icons/rait.svg')
+.sort-goods-v2_btn
+	width: 96px
+	height: 32px
+	display: flex
+	justify-content: center
+	align-items: center
+	color: white
+	background-color: $accent
+	border-radius: 3px
+	font-size: 14px
+	border: 1px solid transparent
+	transition: .3s
+	&:hover
+		border: 1px solid $accent
+		color: $accent
+		background-color: white
+		text-decoration: none
+
+.sort-goods-v2_item
+	display: flex
+	justify-content: space-between
+	align-items: center
+	min-height: 114px
+	border-bottom: 1px solid #F2F2F2
+	&:first-child
+		border-top: 1px solid #F2F2F2
+	.sort-goods-v2_head
+		max-width: 300px
+		width: auto
+
+.sort-goods-v2_head
+	color: #4F4F4F
+	font-size: 14px
+	font-weight: 600
+	line-height: 18px
+	width: 150px
+	display: block
+.sort-goods-v2_item-left
+	position: relative
+	padding-left: 135px
+
+.sort-goods-v2-img
+	position: absolute
+	left: 0
+	top: -7px
+	width: 102px
+	height: 102px
+	background-position: center
+	background-repeat: no-repeat
+
+.sort-goods-v2_item-right
+	display: flex
+	align-items: center
+	width: 50%
+	justify-content: space-between
+.sort-goods-v2_price
+	text-align: right
+	margin-left: 20px
+	.cart-content_price
+		color: $text
+	.cart-content_price-red
+		color: $accent
+.sort-goods-v2_desc
+	font-size: 14px
+	color: #828282
+	font-weight: 600
+	margin-bottom: 15px
+.sort-goods
+	display: flex
+	flex-wrap: wrap
+	.goods_item
+		width: calc(25% - 30px / 4)
+		margin-bottom: 10px
+		&:nth-child(4n + 4)
+			margin-right: 0
+		.goods_item_name
+			margin-bottom: 40px
+			color: #5B5B5B
+			&:hover
+				text-decoration: none
+		.goods_item-buy
+			width: 96px
+			height: 32px
+		.goods_item_price-wrap
+			display: flex
+			align-items: center
+
+.goods_item_price-new
+	font-size: 18px
+	font-weight: 700
+	color: $accent
+.goods_item_price-old
+	font-size: 14px
+	text-decoration: line-through
+	color: #828282	
+	margin-left: 10px
+.sort-vis_item
+	width: 25px
+	height: 25px
+	background-position: center
+	background-repeat: no-repeat
+
+.visual-sort-goods
+	display: flex
+
+.sort-vis_item
+	margin-right: 5px
+	transition: background-image .3s
+	cursor: pointer
+	&:last-child
+		margin-right: 0
+.sort-goods-top
+	display: flex
+	align-items: center
+	justify-content: space-between
+.sort-vis_item__1
+	background-image: url('../img/icons/sort-vis1.svg')
+	&:hover
+		background-image: url('../img/icons/sort-vis1a.svg')
+.sort-vis_item__1--active
+	background-image: url('../img/icons/sort-vis1a.svg')
+.sort-vis_item__2
+	background-image: url('../img/icons/sort-vis2.svg')
+	&:hover
+		background-image: url('../img/icons/sort-vis2a.svg')
+.sort-vis_item__2--active
+	background-image: url('../img/icons/sort-vis2a.svg')
+.sort-vis_item__3
+	background-image: url('../img/icons/sort-vis3.svg')
+	&:hover
+		background-image: url('../img/icons/sort-vis3a.svg')
+.sort-vis_item__3--active
+	background-image: url('../img/icons/sort-vis3a.svg')
+
+.sort-goods_bottom
+	display: flex
+	justify-content: center
+	margin-bottom: 33px
+.sort-goods_show-more
+	width: 224px
+	height: 32px
+	background-color: #F2F2F2
+	border-radius: 3px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 12px
+	color: $text
+	transition: .3s
+	margin-top: 24px
+	&:hover
+		background-color: $accent
+		color: white
+		text-decoration: none
+
+
+.sort-goods_pag
+	display: flex
+	align-items: center
+	justify-content: space-between
+.sort-goods_pag-left
+	display: flex
+
+.sort-goods_pag_item
+	margin-right: 10px
+	display: block
+	width: 32px
+	height: 32px
+	border-radius: 3px
+	border: 1px solid transparent
+	transition: .3s
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 12px
+	font-weight: 600
+	color: $text
+	&:hover
+		border: 1px solid $accent
+		color: $accent
+		text-decoration: none
+.sort-goods_pag_item--active
+	border: 1px solid $accent
+	color: $accent
+.sort-goods_pag_item-end
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/pagend.svg')
+	border: 1px solid #E8E8E8
+
+.sort-goods_pag-right
+	color: #B0B0B0
+	font-size: 12px
+//sort
+//sale
+.sale-tabs
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+.sale-tabs_item
+	font-size: 14px
+	color: #828282
+	font-weight: 700
+	cursor: pointer
+	margin-right: 40px
+	padding-right: 30px
+	position: relative
+
+	&:hover
+		color: #2D9CDB
+	&:after
+		content: ""
+		display: block
+		width: 20px
+		height: 20px
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		right: 0
+		top: calc(50% - 10px)
+
+.sale-item
+	position: relative
+	padding-left: 190px
+.sale-item_img
+	position: absolute
+	left: 0
+	top: 0
+	width: 166px
+	height: 100%
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+.sale-tabs_item-current
+	&:after
+		background-image: url('../img/icons/percents.svg')
+.sale-tabs_item-old
+	&:after
+		background-image: url('../img/icons/archives.svg')
+
+.sale-item
+	min-height: 159px
+	width: calc(50% - 5px)
+	margin-right: 10px
+	border-radius: 3px
+	border: 1px solid #F2F2F2
+	margin-bottom: 10px
+	&:nth-child(2n + 2)
+		margin-right: 0
+
+.sale-item_content
+	padding-top: 15px
+	padding-bottom: 15px
+	padding-right: 15px
+
+.sale-item_head
+	font-size: 14px
+	color: rgba(36, 50, 78, 0.95)
+	font-weight: 700
+	margin-bottom: 15px
+
+.sale-item_text
+	font-size: 12px
+	color: #828282
+
+.sale-item_link
+	width: 96px
+	height: 32px
+	border: 1px solid $accent
+	border-radius: 3px
+	display: flex
+	align-items: center
+	justify-content: center
+	padding-right: 20px
+	color: $accent
+	font-size: 14px
+	position: relative
+	padding-bottom: 4px
+	&:hover
+		color: $accent
+		text-decoration: none
+	&:after
+		content: ''
+		display: block
+		width: 17px
+		height: 8px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/rightsmallred.svg')
+		position: absolute
+		right: 10px
+		top: calc(50% - 4px)
+
+.sale-wrap
+	display: flex
+	flex-wrap: wrap
+//saleend
+
+
+
+//lk
+.lk-order-wrap
+	width: 72%
+
+.lk-order_item
+	margin-bottom: 10px
+
+.lk-order_item-top
+	background-color: #F2F2F2
+	padding-left: 50px
+	padding-right: 50px
+	padding-top: 45px
+	padding-bottom: 45px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	.btn-red
+		width: 250px
+		height: 56px
+
+.lk-order_item-top_num
+	font-size: 20px
+	font-weight: 700
+	margin-bottom: 10px
+.lk-order_item-top_status
+	color: #7C7C7C
+	font-size: 18px
+	font-weight: 600
+	padding-left: 30px
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 16px
+		height: 16px
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		border-radius: 50%
+		left: 0
+		top: calc(50% - 8px)
+
+.yellow-status
+	&:before
+		background-color: #FFC120
+.green-status
+	&:before
+		background-color: #27AE60
+		background-image: url('../img/icons/check.svg')
+
+.lk-order-list
+	padding-top: 15px
+	padding-left: 50px
+	padding-right: 50px
+	padding-bottom: 20px
+	border: 1px solid #F2F2F2
+	border-top: none
+	border-bottom-left-radius: 3px
+	border-bottom-right-radius: 3px
+.lk-order-list_item-right
+	flex-grow: 1
+
+	.lk-order-list_item-right-row-left, .lk-order-list_item-right-row-right
+		width: 50%
+
+.lk-order-list_item
+	display: flex
+.lk-order-list_item-right-row
+	display: flex
+	font-size: 12px
+	margin-bottom: 10px
+.gray-text
+	color: #7C7C7C
+.order-head
+	font-size: 16px
+	font-weight: 600
+.lk-order-list_item-left
+	width: 332px
+	display: flex
+	margin-bottom: 30px
+.lk-order-list_item-left_img
+	width: 70px
+	height: 70px
+	border-radius: 3px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+.lk-order-list_item-left_text
+	width: calc(100% - 70px)
+	padding-left: 20px
+	font-weight: 600
+	font-size: 14px
+	line-height: 17px
+
+.order-list_name
+	width: 60%
+	margin-bottom: 5px
+.order-list_small-text
+	color: #828282
+	margin-bottom: 10px
+
+.order-list_price
+	font-size: 18px
+	font-weight: 700
+
+.lk-wrap
+	display: flex
+.lk-help
+	width: 28%
+	padding-left: 49px
+.bold-link
+	font-size: 14px
+	color: #2D9CDB
+	font-weight: 600
+	transition: color .3s
+	&:hover
+		color: $accent
+		text-decoration: none
+.lk-help_top
+	padding-bottom: 20px
+
+.bold-link-wrap
+	line-height: 15px
+	margin-bottom: 10px
+.lk-help_bottom
+	padding-top: 20px
+	border-top: 1px solid #F2F2F2
+
+	.btn
+		width: 100%
+.lk-help_bottom-text
+	text-align: center
+	margin-bottom: 23px
+	font-weight: 600
+
+.logout_link
+	width: 89px
+	height: 25px
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #2D9CDB
+	font-size: 12px
+	border: 1px solid #F2F2F2
+	border-radius: 3px
+	margin-top: 10px
+	transition: .3s
+	&:hover
+		color: white
+		text-decoration: none
+		border-color: transparent
+		background-color: #2D9CDB
+
+.user-block_text
+	padding-left: 20px
+.user-block
+	display: flex
+	align-items: center
+	margin-bottom: 50px
+.user-block_link
+	color: #0099DE
+	border-bottom: 1px solid #0099DE
+	font-size: 12px
+
+	&:hover
+		color: #0099DE
+		text-decoration: none
+.user-block-img
+	width: 65px
+	height: 65px
+	border-radius: 50%
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+.user-inf
+	width: 555px
+	padding-bottom: 40px
+
+.user-inf-form
+	width: 100%
+	display: block
+	margin-bottom: 40px
+	.input-wrap
+		margin-bottom: 10px
+	.input
+		width: 100%
+		background-color: #F8F8F8
+		color: #7C7C7C
+		padding-top: 10px
+
+.input-wrap
+	position: relative
+	label
+		position: absolute
+		top: 4px
+		font-size: 12px
+		color: #C4C4C4
+		left: 15px
+	.clear-input
+		width: 20px
+		height: 20px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/x.svg')
+		position: absolute
+		right: 22px
+		top: 15px
+		cursor: pointer
+
+.user-inf-city
+	margin-bottom: 60px
+.user-inf-city_text
+	color: #2D9CDB
+@media (max-width: 1066px)
+	.lk-wrap
+		display: block
+	.lk-order-wrap
+		width: 100%
+	.lk-help
+		width: 100%
+		padding-left: 0
+	.lk-help_bottom
+		width: 253px
+	
+	.sort-goods
+		.goods_item
+			width: calc(100% / 3 - 20px / 3)
+			&:nth-child(4n + 4)
+				margin-right: 10px
+			&:nth-child(3n + 3)
+				margin-right: 0
+
+@media (max-width: 834px)
+	.lk-order-list
+		padding-left: 15px
+		padding-right: 15px
+	.sort-goods
+		.goods_item
+			width: calc(100% / 2 - 10px / 2)
+			&:nth-child(4n + 4)
+				margin-right: 10px
+			&:nth-child(3n + 3)
+				margin-right: 10px
+			&:nth-child(2n + 2)
+				margin-right: 0
+
+@media (max-width: 674px)
+	.sort-select-wrap
+		order: 2
+		margin-right: 30px
+	.fancybox-slide--html
+		padding: 0px
+
+	.show-filter_btn
+		display: block
+		order: 3
+	.visual-sort-goods
+		order: 1
+	.sort-wrap
+		.sort_filter
+			display: none
+	.sort-goods-wrap
+		padding-left: 0
+		width: 100%
+@media (max-width: 618px)
+	.user-inf
+		width: 100%
+	.lk-order-list_item
+		flex-direction: column
+	.lk-order-list_item-left
+		width: 100%
+		margin-bottom: 20px
+	.lk-order_item-top
+		padding-left: 20px
+		padding-right: 20px
+		padding-top: 20px
+		padding-bottom: 20px
+	.lk-order_item-top
+		flex-direction: column
+		align-items: flex-start
+	.lk-order_item-top-text
+		margin-bottom: 15px
+	.lk-order_item-top_num
+		margin-bottom: 17px
+	.lk-order-list_item-right-row-right
+		padding-left: 10px
+//lkend
+
+
+
+//brand
+
+.curent-brand_good
+	margin-top: 30px
+.curent-brand_good-container
+	display: flex
+	.goods_item
+		min-height: 403px
+		border: 1px solid #F2F2F2
+	.goods_item-content
+		border: none
+	.goods_item_name
+		margin-bottom: 60px
+		color: $text
+		&:hover
+			text-decoration: none
+			color: $accent
+	.goods_item-buy
+		width: 96px
+		height: 32px
+.goods_item_green-text
+	color: #27AE60
+	font-size: 11px
+.curent-brand-content_top
+	display: flex
+	position: relative
+	padding-left: 200px
+
+.curent-brand_img
+	width: 152px
+	height: 101px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	position: absolute
+	left: 0
+	top: 0
+
+.brands-section-top
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 20px
+.brands-section_big-letter
+	font-size: 	32px
+	color: #2F3D56
+	font-weight: 700
+	text-transform: uppercase
+.brands-section_top-link
+	font-size: 14px
+	color: #2D9CDB
+	font-weight: 700
+	&:hover
+		text-decoration: none
+		color: $accent
+.brands-section_content
+	column-count: 5
+	width: 800px
+	margin-bottom: 70px
+.brands-section_item
+	line-height: 1.1
+	margin-bottom: 15px
+.brands-section_link
+	color: #2F3D56
+	font-size: 14px
+	&:hover
+		color: $accent
+		text-decoration: none
+.count_brands
+	font-size: 12px
+	color: #7C7C7C
+	font-weight: 300
+	margin-left: 10px
+.brands_list
+	position: relative
+	z-index: 1
+	padding-top: 30px
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+.brands_list-left
+	font-size: 14px
+	color: #7C7C7C
+	font-weight: 700
+	margin-right: 20px
+
+.brands_list-right
+	display: flex
+
+
+.brands_list-item
+	color: #2F3D56
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: 700
+	&:hover
+		color: $accent
+		text-decoration: none
+
+
+.brands_list-item_dropdown
+	position: absolute
+	left: 0
+	top: 0
+	background-color: #FAFAFA
+	width: 100%
+	z-index: -1
+	opacity: 0
+	pointer-events: none
+	transition: opacity .3s
+	&:before
+		content: ''
+		display: block
+		height: 100%
+		width: 100vw
+		position: absolute
+		left: -1000px
+		background-color: #FAFAFA
+	&:after
+		content: ''
+		display: block
+		height: 100%
+		width: 100vw
+		position: absolute
+		top: 0
+		right: -1000px
+		background-color: #FAFAFA
+
+
+.brands_list-item_dropdown-inner
+	position: relative
+	z-index: 1
+	padding-top: 70px
+	padding-bottom: 30px
+.brands-dropdown_head
+	font-size: 14px
+	font-weight: 600
+	color: $accent
+	margin-bottom: 10px
+
+.brands-dropdown-content
+	column-count: 5
+.brands-dropdown_link
+	display: block
+	font-size: 14px
+	color: #7C7C7C
+	margin-bottom: 13px
+	line-height: 1.3
+	&:hover
+		color: $accent
+		text-decoration: none
+
+.brands_list-item-wrap
+	margin-right: 15px
+	&:hover
+		.brands_list-item_dropdown
+			opacity: 1
+			pointer-events: auto
+	&:last-child
+		margin-right: 0
+//brand
+
+//work
+
+
+.job-input_radio-head
+	margin-bottom: 15px
+	margin-top: 20px
+.job-radio_hid
+	display: none
+	&:checked + .job_contry-radio
+		border: 1px solid $accent
+		.job_contry-radio-inner
+			background-color: $accent
+
+.job-input_radio-wrap
+	display: flex
+	align-items: center
+	margin-bottom: 20px
+
+.job-input_radio-input
+	display: flex
+	align-items: center
+	margin-right: 60px
+	&:last-child
+		margin-right: 0px
+.job-input_wrap
+	margin-bottom: 15px
+.job_contry-radio
+	width: 22px
+	height: 22px
+	display: flex
+	align-items: center
+	justify-content: center
+	border: 1px solid #C4C4C4
+	border-radius: 50%
+	margin-right: 10px
+	cursor: pointer
+.job_contry-radio-inner
+	width: 16px
+	height: 16px
+	border-radius: 50%
+
+.job-input
+	width: 100%
+	background-color: #fff
+	border: 1px solid #F2F2F2
+	height: 46px
+	border-radius: 3px
+	padding-left: 16px
+	font-size: 16px
+	color: #4F4F4F
+	&::placeholder
+		color: #C4C4C4
+.job-popup_head-20
+	font-size: 20px
+	color: #4F4F4F
+	font-weight: 600
+	margin-bottom: 10px  
+.job-popup_head-18
+	margin-bottom: 30px
+.job-popup_head-18
+	font-size: 18px
+	color: #4F4F4F
+	font-weight: 600
+.job-popup
+	display: none
+	width: 500px
+	padding-left: 40px
+	padding-right: 40px
+	padding-top: 30px
+	padding-bottom: 40px
+	border-radius: 3px
+	font-size: 16px
+	color: #4F4F4F
+	.polit-conf
+		.checkbox-custom
+			top: 3px
+	.btn
+		margin-left: auto
+		margin-right: auto
+		margin-top: 35px
+		width: 250px
+		height: 60px
+		border-radius: 3px
+
+.job
+	padding-top: 30px
+.job-item
+	padding-top: 20px
+	padding-bottom: 20px
+	border-bottom: 1px solid #F2F2F2
+	padding-bottom: 40px
+	.custom-ul
+		margin-bottom: 30px
+.job-item_head
+	width: 70%
+	line-height: 1.2
+.job-item-top
+	display: flex
+	justify-content: space-between
+	color: #4F4F4F
+	font-size: 32px
+	font-weight: 600
+	margin-bottom: 30px
+
+.job-item_btn
+	width: 171px
+	height: 56px
+	
+
+.work_workers
+	background-color: #2F3D56
+	color: white
+	.container
+		padding-top: 100px
+		padding-bottom: 100px
+	.section-head-center-white
+		margin-bottom: 30px
+
+
+.workers_gal
+	display: flex
+	flex-direction: column
+	align-items: center
+	
+.big-search-wrap
+	label
+		position: absolute
+		top: 0
+		color: #C4C4C4
+		left: 100px
+		top: 10px
+
+.work_workers
+	.big-btn
+		width: 250px
+		height: 60px
+		margin-top: 78px
+		margin-bottom: 40px
+	.section-descrip-center-white
+		margin-bottom: 60px
+	.section-descrip-center-gray
+		margin-bottom: 0
+	.work-link
+		color: #2D9CDB
+		&:hover
+			color: $accent
+			text-decoration: none
+.work_workers_trig
+	position: relative
+	padding-left: 70px
+	margin-bottom: 40px
+	width: 806px
+	margin-left: auto
+	margin-right: auto
+	line-height: 1.4
+	font-size: 18px
+	&:before
+		content: ''
+		display: block
+		width: 48px
+		height: 48px
+		border-radius: 50%
+		background-color: $accent
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		left: 0
+		top: calc(50% - 24px)
+.work_workers_trig-1
+	&:before
+		background-image: url('../img/icons/worktrig.svg')
+.work_workers_trig-2
+	&:before
+		background-image: url('../img/icons/worktrig2.svg')
+.work-container
+	.section-head-center
+		margin-bottom: 80px
+		margin-top: 30px
+	.big-input
+		height: 90px
+		padding-left: 100px
+		padding-top: 10px
+		font-size: 34px
+		border: 2px solid $accent
+
+		&::placeholder
+			color: #C4C4C4
+	.big-search_btn
+		left: 37px
+	.big-search-wrap
+		margin-bottom: 60px
+	.big-btn
+		width: 250px
+		height: 60px
+
+
+
+.work-trig_item
+	color: #7C7C7C
+	padding-left: 12px
+	padding-right: 12px
+	padding-top: 10px
+	padding-bottom: 10px
+	background-color: #fff
+	border-radius: 60px
+	border: 1px solid #C4C4C4
+	display: inline-block
+	margin-bottom: 15px
+	margin-left: 10px
+	margin-right: 10px
+
+	&:hover
+		color: white
+		background-color: $accent
+		text-decoration: none
+		border-color: transparent
+.wrap-work-trig
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 60px
+	justify-content: center
+.section-head-center
+	color: #2F3D56
+	font-size: 44px
+	font-family: RobotoCon
+	font-weight: 700
+	text-align: center
+.section-head-center-white
+	color: #fff
+	font-size: 44px
+	font-family: RobotoCon
+	font-weight: 700
+	text-align: center
+	line-height: 1.2
+.section-descrip-center
+	font-size: 18px
+	text-align: center
+	width: 980px
+	margin-left: auto
+	margin-right: auto
+
+.section-descrip-center-white
+	font-size: 18px
+	text-align: center
+	width: 980px
+	margin-left: auto
+	margin-right: auto
+	color: white
+.section-descrip-center-gray
+	color: #B1AEAE
+	font-size: 14px
+
+
+.section-descrip-center-bold
+	font-size: 32px
+	font-weight: 600
+	text-align: center
+	width: 700px
+	margin-left: auto
+	margin-right: auto
+	color: white
+	line-height: 40px
+.work-screen
+	background-image: url('../img/workmain.jpg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	.work-container
+		height: 815px
+
+.work-tabs_link
+	color: #7C7C7C
+	font-size: 14px
+	margin-right: 30px
+	&:last-child
+		margin-right: 0
+	&:hover
+		color: $accent
+		text-decoration: none
+.work-tabs_link--active
+	color: $accent
+.work-tabs
+	display: flex
+	justify-content: center
+
+.work_about-us
+	background-color: #EF3A3B
+	.container
+		padding-top: 100px
+		padding-bottom: 100px
+		color: white
+	.section-head-center-white
+		margin-bottom: 30px
+	.section-descrip-center-white
+		margin-bottom: 60px
+	.section-descrip-center-bold
+		margin-bottom: 80px
+.work_trig-item__img
+	width: 50px
+	height: 50px
+	background-position: center
+	background-repeat: no-repeat
+	margin-bottom: 10px
+
+.work_trig-item__head
+	font-size: 20px
+	font-weight: 600
+	line-height: 24px
+	margin-bottom: 10px
+.work_about-us__trig-wrap
+	display: flex
+	justify-content: space-between
+.work_about-us__trig-item
+	text-align: center
+	width: calc(100% / 4 - 10px)
+.work_trig-item__img
+	margin-left: auto
+	margin-right: auto
+
+//good
+
+.addCart-popup
+	width: 821px
+	display: none
+	padding: 0
+	background-color: transparent
+	.cart-content_price
+		display: flex
+		align-items: center
+		height: 100%
+		margin-left: 35px
+
+.addCart-popup_slider
+	padding: 40px
+	background-color: white
+	border-radius: 3px
+.addCart-popup_slider-head
+	font-size: 24px
+	font-weight: 500
+	line-height: 21px
+	color: #4F4F4F
+	margin-bottom: 43px
+
+.goods-slider-var-popup
+	.goods_item_image
+		height: 160px
+	.goods_item-var_name
+		font-size: 12px
+		font-weight: 700
+
+	.goods_item-content
+		padding-top: 12px
+		padding-left: 0
+		padding-right: 0
+		padding-bottom: 0
+		border: none
+	.goods_item-var_name-wrap
+		margin-bottom: 6px
+		line-height: 1
+	.goods_item_price
+		color: #4F4F4F
+	.goods_item-buy
+		width: 113px
+		height: 40px
+		margin-top: 5px
+	.goods_item-var_cat
+		margin-bottom: 10px
+
+.addCart-popup_item-right
+	display: flex
+	width: 40%
+	justify-content: flex-end
+.addCart-popup_item-left
+	padding-left: 124px
+	position: relative
+	width: 60%
+	padding-right: 10px
+.addCart-popup_item-img
+	width: 100px
+	height: 100px
+	position: absolute
+	left: 0
+	top: 0
+	background-position: center
+	background-repeat: no-repeat
+.addCart-popup_item
+	min-height: 100px
+	display: flex
+	justify-content: space-between
+.addCart-popup_item-text
+	color: #5B5B5B
+	font-size: 14px
+	line-height: 20px
+	display: flex
+	align-items: center
+	height: 100%
+.addCart-popup_good
+	padding: 40px
+	background-color: white
+	border-radius: 3px
+	margin-bottom: 5px
+.addCart-popup_good-top
+	border-bottom: 1px solid #F2F2F2
+	padding-bottom: 24px
+	
+	.good-popup_head
+		position: relative
+		padding-left: 50px
+		&:before
+			content: ''
+			display: block
+			width: 32px
+			height: 32px
+			background-repeat: no-repeat
+			background-position: center
+			background-image: url('../img/icons/checkgreen.svg')
+			position: absolute
+			left: 0
+			top: 10px
+
+.addCart-popup_good-bottom
+	padding-top: 24px
+	display: flex
+	justify-content: space-between
+	align-items: center
+.addCart-popup_good-bottom-btn-wrap
+	display: flex
+.addCart-popup_good-bottom-text
+	font-size: 12px
+	font-weight: 600
+	color: #979797
+
+.add-cart_btn
+	display: block
+	width: 230px
+	height: 51px
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 16px
+	font-weight: 700
+	text-align: center
+	border-radius: 3px
+	transition: .3s
+	margin-right: 17px
+	&:last-child
+		margin-right: 0
+	&:hover
+		text-decoration: none
+.add-cart_btn--blue
+	border: 1px solid #2D9CDB
+	color: #2D9CDB
+	&:hover
+		color: white
+		background-color: #2D9CDB
+.add-cart_btn--red
+	background-color: $accent
+	color: white
+	&:hover
+		background-color: #b60b0b
+		color: white
+.good-popup
+	width: 821px
+	padding: 39px
+	display: none
+	.cart-content_price
+		color: #5B5B5B
+	.btn
+		width: 250px
+		height: 51px
+.good-popup_content
+	display: flex
+
+.good-popup_content-right
+	width: calc(100% - 244px)
+	padding-left: 19px
+.good-popup_desc
+	color: #5B5B5B
+	font-size: 16px
+	line-height: 20px
+	font-weight: 600
+	margin-bottom: 32px
+
+.radio-hid
+	display: none
+.radio-hid:checked + .good_custom-radio
+	border: 1px solid $accent
+	.good_custom-radio-inner
+		background-color: $accent
+
+
+.good-popup_content-right-center
+	padding-left: 25px
+	margin-bottom: 20px
+	.good_custom-radio
+		margin-top: 15px
+.good_radio_consult-radio-text
+	color: #5B5B5B
+	font-size: 12px
+	margin-left: 10px
+
+.good_radio_consult
+	width: 100%
+	padding-top: 15px
+	padding-bottom: 15px
+	padding-left: 25px
+	padding-right: 30px
+	background-color: #FFF0C8
+	border-radius: 3px
+	margin-bottom: 30px
+.good_radio_consult-top
+	font-size: 12px
+	color: #F2994A
+	line-height: 14px
+	position: relative
+	padding-left: 30px
+	margin-bottom: 15px
+	&:before
+		content: ''
+		position: absolute
+		display: block
+		width: 16px
+		height: 18px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/consult.svg')
+		left: 0
+		top: 4px
+.good-popup_wrap-radio
+	display: flex
+	margin-bottom: 30px
+	&:last-child
+		margin-bottom: 0
+.good_radio-content
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-grow: 1
+	padding-left: 11px
+	align-items: stretch
+	.cart-content_price
+		margin-top: 15px
+.good_radio-content-text
+	font-size: 12px
+	color: #5B5B5B
+	line-height: 18px
+	width: 255px
+
+
+.good_radio_img
+	width: 50px
+	height: 50px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	opacity: .3
+.good_radio_img--active
+	opacity: 1
+.good_custom-radio
+	width: 20px
+	height: 20px
+	border: 1px solid #A0A4A8
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: white
+.good_custom-radio-inner
+	width: 12px
+	height: 12px
+	background-color: #F3F3F3
+	border-radius: 50%
+	background-color: #F3F3F3
+.good-popup_content-img
+	width: 244px
+	height: 325px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+.good-popup_head
+	font-size: 32px
+	font-weight: 600
+	color: #4F4F4F
+	margin-bottom: 31px
+
+.goods_item-var_bottom
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 20px
+	.goods_item-buy
+		width: 110px
+		height: 35px
+		margin-top: 0
+	.goods_item_price
+		color: black
+.goods_item-var_cat
+	font-size: 12px
+	color: #000000
+.goods_item-var_name
+	color: #000
+	font-size: 16px
+	font-weight: 600
+	&:hover
+		color: $accent
+		text-decoration: none
+
+.goods_item-var_name-wrap
+	margin-bottom: 10px
+.slider-wrap
+	margin-bottom: 60px
+.good-slider_gray
+	background-color: #FAFAFA
+	margin-bottom: 60px
+	.good-page_descript-head
+		margin-bottom: 61px
+.good-slider_inner-page
+	padding-top: 51px
+	padding-bottom: 69px
+	.good-page_descript-head
+		margin-bottom: 35px
+	.goods_item
+		.goods_item_name
+			font-size: 12px
+			color: #000
+		.goods_item_price
+			color: $text
+			font-size: 16px
+
+.good-page_descript
+	margin-bottom: 60px
+.good-page_descript-head
+	font-size: 24px
+	font-weight: 700
+	color: #4F4F4F
+	margin-bottom: 17px
+.good-page_charact-wrap
+	margin-bottom: 40px
+.good-page_descript-text
+	font-size: 16px
+	color: #828282
+	margin-bottom: 30px
+.good-page_descript-link
+	color: #2D9CDB
+	&:hover
+		color: $accent
+.good-page_charact-left
+	width: calc(100% - 150px)
+.cart-triggers-compact
+	.cart-triggers-wrap
+		display: block
+	.cart-triggers_item-text
+		width: auto
+	.cart-triggers_item
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	.cart-triggers_item-img
+		top: -5px
+.cart-triggers_item-contact
+	.cart-triggers_item
+		&:last-child
+			margin-bottom: 20px
+.good-page_charact-wrap
+	display: flex
+	justify-content: space-between
+.good-page_charact-country
+	font-size: 12px
+	margin-bottom: 10px
+.good-page_charact-right
+	margin-left: 30px
+.good-page_charact-link
+	color: #2D9CDB
+	font-size: 12px
+	&:hover
+		color: $accent
+.good-page_charact-logo
+	width: 120px
+	height: 40px
+	background-size: contain
+	background-position: center
+	background-repeat: no-repeat
+	margin-bottom: 10px
+
+.good-page_charact
+	display: flex
+	width: 50%
+	justify-content: space-between
+.good-page_param-content_item
+	font-size: 14px
+	display: flex
+	justify-content: space-between
+	color: #979797
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
+	span
+		&:last-child
+			color: #4F4F4F
+.good-page_charact-content-desc
+	margin-bottom: 17px
+	a
+		color: #2D9CDB
+		&:hover
+			color: #2D9CDB
+.good-page_charact-content-head
+	font-size: 24px
+	font-weight: 600
+	color: #4F4F4F
+	margin-bottom: 17px
+.good-page_param-head
+	font-size: 14px
+	color: #000
+	font-weight: 600 
+	margin-bottom: 13px
+
+.good-page_right
+	padding-top: 20px
+.good-page_right_buttons
+	.btn
+		width: 100%
+		height: 51px
+		margin-bottom: 19px
+.good-page_right_availability
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 30px
+.good-page_right_availability-garant
+	width: 164px
+	height: 24px
+	border: 1px solid #FFCA41
+	border-radius: 3px
+	color: #FFCA41
+	font-size: 10px
+	font-weight: 600
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	&:after
+		content: ''
+		display: block
+		width: 24px
+		height: 23px
+		position: absolute
+		right: -13px
+		top: -13px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/smallstar.svg')
+.good-page_right_availability-text
+	font-size: 14px
+	font-weight: 700
+	color: #95AC8F
+
+.good-page_right_sale
+	color: #F2994A
+	font-size: 16px
+	position: relative
+	padding-left: 30px
+
+	&:before
+		content: ""
+		display: block
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/ticket.svg')
+		width: 17px
+		height: 16px
+		position: absolute
+		left: 0
+		top: 5px
+.good-page_right_sale-price
+	font-weight: 600
+	margin-left: 78px
+.good-page_right_price
+	font-size: 48px
+	font-weight: 700
+	color: #5B5B5B
+	margin-bottom: 15px
+.good-page_rating
+	margin-bottom: 28px
+.good-page_rating_right-status--fullgrade
+	color: white
+	font-size: 10px
+.good-page_rating_right-status
+	width: 167px
+	height: 17px
+	background-color: #FFCA41
+	border-radius: 3px
+	display: flex
+	align-items: center
+	padding-left: 2px
+	padding-right: 4px
+	padding-top: 2px
+	padding-bottom: 2px
+	justify-content: space-between
+	position: relative
+.good-page_rating_right-ask
+	width: 10px
+	height: 10px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/askg.svg')
+	background-color: white
+	border-radius: 50%
+	display: block
+	position: absolute
+	top: 0
+	right: -15px
+.good-page_rating_right-status-line
+	height: 100%
+	width: 100px
+	border: 1px solid rgba(#fff, 0.4)
+	border-radius: 3px
+.good-page_rating_right-status-line-long
+	height: 100%
+	width: 75%
+	background: linear-gradient(270deg, #FFFFFF 36.74%, rgba(255, 255, 255, 0) 100%)
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	padding-right: 5px
+	span
+		color: #FFCA41
+		font-size: 10px
+		font-weight: 700
+
+.good-page_rating_right-logo
+	width: 187px
+	height: 16px
+	background-position: left
+	background-repeat: no-repeat
+	background-image: url('../img/icons/ratlogo.svg')
+	margin-bottom: 14px
+
+.good-page_rating
+	background-color: #F9F1D8
+	padding-left: 18px
+	padding-right: 18px
+	padding-bottom: 20px
+	padding-top: 20px
+	display: flex
+	justify-content: space-between
+.good-page_rating-text
+	font-size: 11px
+	font-weight: 600
+	color: #5B5B5B
+	width: 183px
+	line-height: 12px
+.good-page_rating-link
+	font-size: 11px
+	color: #2D9CDB
+	font-weight: 600
+	&:hover
+		color: #2D9CDB
+		text-decoration: none
+
+.good-page_factory-left
+	font-size: 16px
+.good-page_factory-price
+	background-color: #EDEDED
+	border-radius: 3px
+	color: #818181
+	height: 34px
+	display: flex
+	align-items: center
+	padding-left: 16px
+	justify-content: space-between
+	padding-right: 16px
+	margin-bottom: 10px
+	border-radius: 3px
+.good-page_factory-right
+	font-size: 16px
+	font-weight: 600
+	text-decoration: line-through
+	padding-right: 126px
+
+
+.good-page_right-size_wrap
+	display: flex
+	justify-content: space-between
+	color: #818181
+	font-size: 12px
+	margin-bottom: 23px
+.good-page_right
+	padding-left: 42px
+.good-page_right-head
+	font-size: 24px
+	font-weight: 700
+	color: #5B5B5B
+.good-page_right-size
+	font-size: 12px
+	color: #818181
+	padding-left: 25px
+	position: relative
+	margin-right: 10px
+	&:before
+		content: ""
+		display: block
+		width: 18px
+		height: 20px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/size.svg')
+		position: absolute
+		left: 0
+		top: -1px
+.good-page_right-link
+	color: #2D9CDB
+	font-size: 12px
+.good-page_right-text
+	color: #818181
+	font-size: 16px
+	margin-bottom: 15px
+.good-page_content
+	margin-bottom: 40px
+	background-color: #FAFAFA
+	display: flex
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 1000px
+		height: 100%
+		left: -1000px
+		top: 0
+		position: absolute
+		background-color: #FAFAFA
+	&:after
+		content: ''
+		display: block
+		width: 1000px
+		height: 100%
+		right: -1000px
+		top: 0
+		position: absolute
+		background-color: #FAFAFA
+		
+.good-page_slider-nav
+	width: 90px
+	margin-top: 10px
+	
+.good-page_slider
+	margin-left: 21px
+	width: 498px
+	position: relative
+	.slick-arrow
+		position: absolute
+		z-index: 2
+		top: calc(50% - 32px / 2)
+		width: 32px
+		height: 32px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/pagesliderl.svg')
+		background-color: transparent
+		border-radius: 0px
+	.slick-prev
+		left: 24px
+	.slick-next	
+		right: 24px
+		transform: rotate(180deg)
+
+.good-page_slider-nav_item
+	width: 87px
+	height: 87px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	cursor: pointer
+	border: 1px solid transparent
+	border-radius: 3px
+	margin-bottom: 5px
+	display: flex !important
+	justify-content: center
+	align-items: center
+	overflow: hidden
+
+.slick-current.good-page_slider-nav_item
+	border: 1px solid $accent
+.good-page_slider_item
+	background-position: center
+	height: 627px
+	background-size: cover
+	background-repeat: no-repeat
+
+.good-page_slider-wrap
+	display: flex
+	
+
+//goodend
+
+//cart
+
+.cart-triggers
+	background-color: #FCF5DE
+	padding-top: 39px
+	padding-bottom: 40px
+	padding-left: 39px
+	padding-right: 39px
+.cart-triggers-wrap
+	display: flex
+	justify-content: space-between
+.cart-triggers_head
+	font-size: 20px
+	font-weight: 700
+	line-height: 1.1
+	margin-bottom: 20px
+.text-red
+	color: $accent
+.sale-kod
+	width: 100%
+	display: flex
+	height: 42px
+	margin-bottom: 40px
+.sale-kod_btn
+	background-color: #F2F2F2
+	width: 111px
+	height: 100%
+	border-radius: 0px 3px 3px 0px
+	border: none
+	color: #000000
+	font-size: 12px
+.sale-kod_input
+	flex-grow: 1
+	padding-left: 15px
+	padding-right: 15px
+	font-size: 12px
+	border: 1px solid #F2F2F2
+	border-bottom-left-radius: 3px
+	border-top-left-radius: 3px
+	&::placeholder
+		color: #C4C4C4
+
+.cart-bottom_right-content_item
+	display: flex
+	align-items: centet
+	justify-content: space-between
+	font-size: 12px  
+	margin-bottom: 15px
+
+.cart-bottom_right-content_item-bold
+	font-weight: 700
+	color: #4F4F4F
+	font-size: 20px
+	margin-top: 35px
+.cart-content
+	margin-bottom: 20px
+.cart-main_head
+	font-size: 32px
+	font-weight: 700
+	color: #4F4F4F
+.cart-content_item-img
+	width: 100px
+	height: 100px
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+.cart-content_item_left
+	display: flex
+	align-items: center
+	width: 50%
+.cart-content_item
+	display: flex
+	justify-content: space-between
+	padding-bottom: 24px
+	padding-top: 24px
+	border-bottom: 1px solid #F2F2F2
+	&:last-child
+		border-bottom: none
+
+.cart-content-count
+	border: 1px solid #F2F2F2
+	width: 112px
+	height: 48px
+	display: flex
+	border-radius: 3px
+
+.cart-content-count-wrap
+	display: flex
+	justify-content: center
+	align-items: center
+.cart-content_head
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	margin-left: 24px
+	padding-top: 5px
+	padding-bottom: 5px
+	width: 70%
+.cart-content-count-input
+	width: 50px
+	height: 100%
+	text-align: center
+	border: none
+.cart-content_head-link
+	color: $text
+	text-decoration: none
+	font-size: 14px
+	line-height: 1.2
+	margin-bottom: 20px
+	margin-right: 20px
+	&:hover
+		text-decoration: none
+		color: $accent
+
+.cart-content_head-status
+	color: #27AE60
+	font-size: 14px
+
+.cart-content-count_min, .cart-content-count_plus
+	background: none
+	border: none
+	width: 30px
+	color: #4F4F4F
+	font-size: 12px
+	font-weight: 700
+
+.cart-content_price-head
+	font-size: 14px
+	color: #979797
+
+.cart-content_price-wrap
+	text-align: right
+	padding-top: 5px
+	padding-bottom: 5px
+
+.cart-content_price
+	font-size: 18px
+	font-weight: 700
+
+
+.cart-content_price-gray
+	color: #979797
+
+.cart-content_price-red
+	color: $accent
+.cart-content_price-old
+	color: #979797
+	font-size: 14px
+	text-decoration: line-through
+	font-weight: 300
+	
+.cart-content_del
+	display: flex
+	justify-content: center
+	align-items: center
+.cart-content_del-item
+	width: 24px
+	height: 24px
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../img/icons/deletegray.svg')
+	transition: background-image .3s
+	&:hover
+		background-image: url('../img/icons/delete.svg')
+
+.form-gray
+	border-radius: 3px 0px 0px 3px
+	background-color: #F3F3F3
+	padding-left: 40px
+	padding-right: 40px
+	padding-bottom: 39px
+	padding-top: 39px
+	width: 61%
+	.btn-white
+		margin-top: 20px
+	.form-desc
+		color: #5B5B5B
+		text-align: left
+		font-size: 14px
+	.form-head
+		text-align: left
+		margin-bottom: 2px
+	.input
+		width: 100%
+		height: 56px
+		font-size: 14px
+		margin-bottom: 10px
+		&::placeholder
+			color: #4F4F4F
+	.jq-selectbox__select-text
+		color: #4F4F4F
+		&:after
+			display: none
+	.jq-selectbox
+		width: 100%
+		height: 56px
+		cursor: pointer
+		background-color: white
+		margin-bottom: 15px
+		&:after
+			content: ''
+			display: block
+			width: 10px
+			height: 10px
+			background-position: center
+			position: absolute
+			right: 15px
+			top: calc(50% - 5px)
+			background-image: url('../img/icons/selbot.svg')
+			background-position: center
+			background-repeat: no-repeat
+	.jq-selectbox__select
+		height: 100%
+		display: flex
+		align-items: center
+		padding-left: 15px
+	.jq-selectbox__dropdown
+		width: 100% !important
+		top: 56px !important
+		border-radius: 0px
+		box-shadow: none
+		li
+			border-bottom: 1px solid #f2f2f2
+			&:last-child
+				border-bottom: none
+
+.cart-bottom
+	display: flex
+	margin-bottom: 10px
+.cart-bottom_right
+	width: 39%
+	border: 1px solid #F2F2F2
+
+.btn-white
+	width: 283px
+	height: 51px
+	display: flex
+	justify-content: center
+	align-items: center
+	color: white
+	font-weight: 700
+	font-size: 16px
+	border: none
+	background-color: #E0E0E0
+	border-radius: 3px
+	transition: .3s
+	&:hover
+		background-color: $accent
+
+.cart-bottom_right
+	padding-left: 30px
+	padding-right: 70px
+	padding-top: 38px
+	padding-bottom: 38px
+
+.cart-triggers_item
+	padding-left: 40px
+	position: relative
+.cart-triggers_item-img
+	background-position: center
+	background-repeat: no-repeat
+	position: absolute
+	width: 30px
+	height: 30px
+	left: 0
+	top: 0
+.cart-triggers_item-text
+	width: 172px
+	font-size: 14px
+	line-height: 1.2
+.text-blue
+	color: #0099DE
+.cart-triggers_item-text_long
+	width: 215px
+//cart
+
+
+.workers_gal-item
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	cursor: pointer
+.workers_gal_row-item
+	display: flex
+.workers_gal_row-item.workers_gal_row-item-small
+	display: flex
+	flex-wrap: wrap
+	.workers_gal-item
+		width: 136px
+		height: 137px
+.workers_gal_row
+	display: flex
+	flex: wrap
+	.workers_gal-item
+		width: 274px
+		height: 274px
+.workers_gal_row
+	.workers_gal-row-col
+		.workers_gal-item
+			width: 136px
+			height: 137px
+						
+.workers_gal-row-col
+	.workers_gal-item
+		width: 136px
+		height: 137px
+
+.workers_gal-row-col
+	.workers_gal-item
+		width: 136px
+		height: 137px
+
+@media (max-width: 1138px)
+	.good-page_charact-wrap
+		flex-direction: column
+	.good-page_charact
+		order: 2
+		width: 70%
+	.cart-triggers-compact
+		margin-bottom: 40px
+
+
+	.good-page_slider-wrap
+		flex-direction: column
+		width: 50%
+	.good-page_slider-nav
+		order: 2
+	.good-page_slider
+		margin-left: 0
+		width: 100%
+		margin-bottom: 10px
+		order: 1
+	.good-page_right
+		width: 50% 
+	.good-page_slider_item
+		
+		img
+			
+	.section-descrip-center-white
+		width: 90%
+	.section-descrip-center
+		width: 90%
+	.section-descrip-center-bold
+		width: 90%
+	.good-page_slider-nav
+		width: 100%
+	.good-page_slider-nav_item
+
+@media (max-width: 1060px)
+	.cart-triggers_item-text 
+		width: auto
+	.cart-triggers_item
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+
+
+@media (max-width: 970px)
+	.sort-goods-v2_item-right
+		flex-direction: column
+		align-items: flex-end
+	.sort-goods-v2_price
+		margin-bottom: 20px
+	.sort-goods-v2_stick
+		margin-bottom: 25px
+	.sort-goods-v2_item
+		padding-top: 15px
+		padding-bottom: 15px
+		align-items: flex-start
+	.sort-goods-v2-img
+		top: 0
+@media (max-width: 933px)
+	.good-page_factory-right
+		padding-right: 0
+	.good-page_right_sale
+		display: flex
+		justify-content: space-between
+	.good-page_right-link
+		display: block
+		margin-top: 5px
+	.good-page_rating
+		display: block
+	.good-page_rating-text
+		width: 100%
+	.good-page_rating_left
+		margin-bottom: 10px
+	.good-page_right_sale-price
+		margin-left: 0px
+	.good-page_right_availability
+		display: block
+	.good-page_right_availability-text
+		margin-bottom: 10px
+	.good-page_slider_item
+		height: 414px
+@media (max-width: 900px)
+	.work_about-us__trig-wrap
+		flex-wrap: wrap
+	.work_about-us__trig-item
+		width: calc(100% / 2 - 10px)
+		margin-bottom: 50px
+	.work-trig_item
+		display: none
+		&:nth-child(-n + 8)
+			display: inline-block
+
+
+@media (max-width: 790px)
+	.sort-goods-v2-img
+		width: 89px
+		height: 89px
+		background-size: cover
+	.sort-goods-v2_item-left
+		padding-left: 111px 
+
+
+@media (max-width: 710px)
+
+	.good-page_slider-wrap
+		margin-bottom: 20px
+	.good-page_content
+		display: block
+	.good-page_right
+		padding-left: 0
+		width: 100%
+	.good-page_slider-wrap
+		width: 100%
+	.good-page_slider_item
+		height: 627px
+	.good-page_charact
+		width: 100%
+@media (max-width: 580px)
+	.catalog-wrap
+		margin-top: 0
+	.work-screen
+		padding-top: 40px
+	.good-page_charact
+		flex-direction: column
+	.good-page_charact-left
+		width: 100%
+		margin-bottom: 20px
+	.good-page_charact-right
+		margin-left: 0
+	.good-page_slider_item
+		height: 434px
+	.slick-slide 
+		img
+			width: 72px
+	.wrap-link-back
+		display: none
+	.serv-content
+		.text-block
+			padding-top: 0px
+	.text-small-h-mob-hid
+		display: none
+	.pagination-mob
+		display: block
+		padding-top: 20px
+		padding-bottom: 20px
+	.job-item-top
+		display: block
+		font-size: 28px
+	.job-item_head
+		width: 100%
+		margin-bottom: 30px
+	.section-head-center-white
+		font-size: 32px
+	.trig-item
+		padding-right: 0
+	.section-head-center
+		font-size: 32px
+	.wrap-work-trig
+		width: 300px
+		margin-left: auto
+		margin-right: auto
+	.work-screen
+		.work-container
+			height: auto
+			padding-bottom: 30px
+	.work-container
+		.section-head-center
+			margin-bottom: 40px
+		.big-search-wrap
+			.big-input
+				font-size: 16px
+				padding-left: 70px
+			label
+				font-size: 12px
+				left: 70px
+				top: 17px
+			.big-search_btn
+				left: 26px
+				width: 30px
+				height: 30px
+				background-size: contain
+				top: calc(50% - 15px)
+
+	.pagination
+		display: none
+@media (max-width: 484px)
+	.work_about-us__trig-item
+		width: 100%
+
+//work
+@media (max-width: 1220px)
+	.workers_gal-item-768-h
+		display: none
+	.video-slider-wrap
+		width: 1150px
+	
+		.slick-next
+			display: none !important
+	.big-form
+		background-size: cover
+
+
+@media (max-width: 1152px)
+
+	.our-triggers
+		background-position: -121px top
+	.our-triggers_logo-img
+		background-size: contain
+	.cat-item
+		width: calc(33% - 40px / 3)
+	.cat-item:nth-child(4n+4)
+		margin-right: 20px
+	.cat-item:nth-child(3n+3)
+		margin-right: 0
+	.main-screen_good
+		flex-wrap: wrap
+	.main-screen_good-item
+		margin-bottom: 15px
+
+	.call-us-slider_item
+		height: 100%
+
+	.call-us-slider
+		.slick-list
+			height: 100%
+		.slick-track
+			height: 100%
+
+	.footer-nav
+		nav
+			flex-wrap: wrap
+			padding-bottom: 20px
+
+	.footer-nav_item
+		margin-bottom: 15px
+	.catalog-brands
+		width: 158px
+	.brands-wrap
+		width: 75px
+	.brands-item
+		margin-right: 0
+
+
+
+@media (max-width: 1024px)
+	.header-bottom_right-search
+		width: auto
+	.blog-slider_item-btn
+		opacity: 1
+	.main-screen-container
+		&:after
+			right: -380px
+	.main-screen
+		.section-head_item-blue_small
+			width: 400px
+	.where-searh_text
+		color: $text
+	.where-searh
+		color: #4F4F4F
+		&:after
+			width: 9px
+			background-image: url('../img/icons/bottomblack.svg')
+			top: calc(50% - 6px)
+
+@media (max-width: 986px)
+	.form-gray	
+		width: 50%
+		.btn-white
+			width: 100%
+	.cart-bottom_right
+		width: 50%
+	.brands_list-left
+		width: 30%
+	.brands_list-right
+		flex-wrap: wrap
+	.brands_list
+		align-items: flex-start
+	.brands-section_content
+		width: 100%
+	.work_workers_trig
+		width: 495px
+	.dev-way-row
+		flex-wrap: wrap
+	.dev-way-item--time
+		order: 3
+
+	.catalog-left-item_dropdown
+		width: 300px
+	.footer-top
+		.container
+			flex-wrap: wrap
+			justify-content: flex-start
+	.footer-top-col
+		margin-right: 10px
+		width: 192px
+		margin-right: 44px
+		margin-bottom: 20px
+
+	.header-search
+		width: 238px
+	.cat-btn
+		margin-left: 30px
+	.header-bottom_left
+		width: 50%
+	.header-bottom_right
+		width: 68%
+	.header-bottom_right
+		justify-content: flex-end
+	.header-top_menu
+		display: none
+
+	.login
+		font-size: 0
+		width: 32px
+		height: 32px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		background-image: url('../img/icons/login.svg')
+	.header-bottom-main-screen--active
+		.login
+			background-image: url('../img/icons/loginblack.svg')
+	.header-bottom-inner
+		.login
+			background-image: url('../img/icons/loginblack.svg')
+	.cart-link
+		margin-left: 25px
+
+	.burger-white
+		display: block
+		width: 15px
+		height: 13px
+		background-position: center
+		background-repeat: no-repeat
+		background-image: url('../img/icons/burger.svg')
+		margin-left: 30px
+	.brands-btn
+		display: none
+	.header-search
+		padding-left: 99px
+
+
+	.dev-inf
+		flex-direction: column
+	.dev-inf_map
+		width: 100%
+		height: 624px
+
+	.dev-inf_content
+		width: 100%
+		margin-top: 10px
+		padding-left: 40px
+		padding-right: 30px
+
+	.wrap-inf_dev
+		flex-direction: column
+		align-items: flex-start
+	.dev-inf_content-text
+		margin-bottom: 10px
+@media (max-width: 845px)
+	.garant-item
+		width: 426px
+	.add-cart_btn
+		width: 194px
+		line-height: 19px
+	.good-popup
+		padding: 30px
+	.good-popup_content-img
+		width: 209px
+		height: 279px
+	.good-popup_content-right
+		width: calc(100% - 209px)
+	.good_radio-content-text
+		
+		padding-right: 26px
+		
+	.cart-content_del
+		margin-left: 27px
+	.cart-content_price-wrap
+		width: 120px
+	.cart-content_head-link
+		margin-right: 0
+	.cart-content_item_left
+		flex-direction: column
+		align-items: flex-start
+		margin-left: 10px
+	.cart-content_head
+		width: auto
+		margin-left: 0
+		margin-bottom: 20px
+	.cart-content_head
+		
+	.sale-item
+		width: 100%
+		margin-right: 0
+	.call-us-slider-wrap
+		padding-top: 40px
+		padding-bottom: 0
+		.container
+			flex-direction: column
+	.call-us-slider
+		width: 100%
+		height: 584px
+		border-top-left-radius: 6px
+		border-top-right-radius: 6px
+		overflow: hidden
+	.call-us-slider-content
+		width: 100%
+		padding-left: 30px
+		padding-right: 30px
+		padding-bottom: 60px
+	.alternovared-logo
+		margin-top: 15px
+		margin-bottom: 10px
+		margin-left: 0
+	.inst-block
+		margin-bottom: 60px
+
+	.wrap-all_movie
+		display: none
+	.our-triggers_top
+		display: block
+	.wrap-trig
+		display: block
+	.trig-item
+		min-height: 68px
+		align-items: center
+	.our-triggers_text-head
+		font-size: 26px
+	.our-triggers_logo
+		width: 60%
+
+	.cat-item
+		width: calc(50% - 10px)
+	.cat-item:nth-child(4n+4)
+		margin-right: 20px
+	.cat-item:nth-child(3n+3)
+		margin-right: 20px
+	.cat-item:nth-child(2n+2)
+		margin-right: 0
+
+	.descrip
+		width: 100%
+
+	.inst-block
+		padding-top: 50px
+		padding-bottom: 112px
+	.inst-libk-wrap
+		margin-left: 0
+	.video-slider
+		margin-top: 100px
+		padding-top: 10px
+		
+	.reduction
+		padding-top: 0
+		&:before
+			top: -164px
+
+	.reduction-item
+		flex-direction: column
+
+	.reduction-item:nth-child(even)
+		flex-direction: column-reverse
+		.reduction-content
+			padding-left: 0
+	.reduction-item_img
+		width: 100%
+	.reduction-item_img-inner
+		position: static
+	.reduction-item_img-1
+		position: static
+	.reduction-item_img-2
+		position: static
+
+	.section-head_item-flex
+		flex-direction: column
+	.banner
+		background-image: url('../img/banner768.png')
+@media (max-width: 768px)
+	.work-screen 
+		.work-container
+			height: auto
+			padding-bottom: 137px
+	.footer-top-col
+		margin-right: 31px
+	.call-us-slider_bottom
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.call-us-slider-content 
+		.btn305w
+			margin-top: 0
+	.call-us-slider-content-head-wrap
+		display: flex
+		.section-head_item-red
+			margin-right: 10px
+	.container
+		padding-left: 30px
+		padding-right: 30px
+	.big-form_small-text
+		padding-left: 0
+		padding-right: 0
+	.big-form_big-head
+		width: 72%
+		margin-left: auto
+		margin-right: auto
+	.blog-slider
+		width: 1000px
+		position: static
+	.blog-slider-wrap
+		position: relative
+	.blog-slider-768-shadow
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		height: 100%
+		width: 75px
+		background-position: top right
+		background-image: url('../img/icons/blog-shadow.svg')
+		z-index: 10
+		background-repeat: repeat-y
+		pointer-events: none
+
+	.brands_list-item_dropdown
+		display: none
+	.reduction
+		margin-bottom: 78px
+		&:before
+		&:after
+			bottom: -70px
+
+	.video-slider-item
+		width: 263px
+		height: 389px
+
+.catalog-mask-close
+	display: none
+
+@media (max-width: 700px)
+	.call-us-slider-content-head-wrap
+		display: block
+	.call-us-slider_bottom
+		display: block
+	.call-us-slider-content 
+		.btn305w
+			margin-top: 22px
+@media (max-width: 761px)
+	.container
+		padding-left: 15px
+		padding-right: 15px
+@media (max-width: 760px)
+	.good-popup_content-img
+		width: 20%
+		background-position: top
+		background-size: contain
+	.good-popup_content-right
+		width: 80%
+	.good_radio-content-text
+		padding-left: 10px
+	.header-search
+		padding-left: 77px
+		width: 100%
+		border: 1px solid #f2f2f2
+	.logo-text
+		display: none
+	.logo
+		display: flex
+	.logo-top
+		margin-bottom: 0
+	.logo-bottom
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+	.logo-bottom_image
+		margin-left: 0
+		margin-top: 4px
+
+	.main-screen
+		.header-bottom
+			background-color: white
+			margin-left: -15px
+			margin-right: -15px
+			padding-left: 15px
+			padding-right: 15px
+	.burger
+		background-image: url('../img/icons/burgerblack.svg')
+		width: 32px
+		height: 32px
+	.header-bottom_right-search
+		margin-right: 13px
+
+	.header-search-btn
+		background-image: url('../img/icons/searchblack.svg')
+
+
+	.login
+		background-image: url('../img/icons/loginblack.svg')
+		width: 32px
+		height: 32px
+	.cart-link
+		background-image: url('../img/icons/cartblack.svg')
+		width: 32px
+		height: 32px
+	.header-search
+		color: $text
+	.catalog-mask_wrap
+		top: 88px
+
+@media (max-width: 750px)
+	.workers_gal-item-320-h
+		display: none
+	.cart-triggers-wrap
+		display: block
+	.cart-triggers_item
+		margin-bottom: 20px
+	.cart-triggers_item-img
+		background-position: top
+	.catalog-mask-close
+		display: block
+	.catalog-brands
+		display: none
+	.header-bottom
+		position: static
+	.catalog-mask_wrap
+		top: 0
+		left: 0
+		width: 100vw
+		height: 100vh
+		padding-top: 70px
+	.catalog-left
+		width: 100%
+	.catalog-left-item_dropdown
+		position: static
+		padding-left: 0
+		display: none
+		opacity: 1
+		pointer-events: auto
+		width: auto
+		height: auto
+		min-height: auto
+		padding-bottom: 20px
+	.catalog-left-item_dropdown-item
+		display: block
+	.catalog-left-item_link
+		padding-right: 30px
+	.catalog-left-item--active
+		.catalog-left-item_link
+			span
+				font-weight: 700
+@media (max-width: 738px)
+	.footer-top-col
+		width: calc(100% / 3 - 40px / 3)
+		margin-right: 10px
+
+	.blog-slider_item
+		height: auto
+	.blog-slider_item_text
+		height: auto
+	.blog-slider_item-btn
+		margin-top: 20px
+	// .cart-content_item
+	// 	flex-wrap: wrap
+	// .cart-content_del
+	// 	order: 3
+	// .cart-content_price-factory
+	// 	order: 5
+	.cart-content_item_left
+		width: 30%
+
+	.addCart-popup_good-bottom
+		flex-direction: column
+		align-items: flex-start
+	.add-cart_btn
+		width: 230px
+		margin-bottom: 15px
+	.addCart-popup_good-bottom-text
+		margin-bottom: 30px
+	.addCart-popup_good-bottom-btn-wrap
+		flex-wrap: wrap
+@media (max-width: 721px)
+	.big-form
+		.input
+			width: 100%
+		.wrap-input
+			width: 100%
+	.big-form_small-text
+		padding-left: 0
+		padding-right: 0
+		margin-bottom: 44px
+	.big-form_big-head
+		font-size: 24px
+	.big-form_small-head
+		font-size: 22px
+
+
+
+
+
+
+@media (max-width: 676px)		
+	.slider-dots
+		padding-left: 15px
+	.main-screen-content-slider-wrap
+		margin-left: -15px
+		margin-right: -15px
+		.main-screen_good
+			padding-left: 15px
+			padding-right: 15px
+	.main-screen-content__slider-item
+		padding-left: 15px
+		padding-right: 15px
+	.addCart-popup_good-top 
+		.good-popup_head
+			padding-left: 30px
+			&:before
+				width: 20px
+				height: 20px
+				background-size: contain
+				top: 5px
+	.addCart-popup_item-left
+		min-height: 100px
+		width: 100%
+		margin-bottom: 10px
+	.addCart-popup_item-right
+		align-items: center
+		width: 100%
+		justify-content: flex-end
+	.addCart-popup_item
+		flex-direction: column
+	.good-popup
+		padding-left: 14px
+		padding-right: 14px
+		.cart-content_price
+			font-size: 16px
+	.good_radio_consult
+		padding-left: 10px
+		padding-right: 10px
+	.good_radio-content-text
+		width: 50%
+		padding-right: 10px
+	.good-popup_wrap-radio
+		width: 100%
+	.good-popup_content-right
+		width: 100%
+	.good-popup_head
+		font-size: 18px
+		margin-bottom: 30px
+	.good-popup_content-img
+		background-position: center
+		width: 209px
+		height: 279px
+		background-size: cover
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 20px
+	.good-popup_content-right-center
+		padding-left: 0
+	.good-popup_content-right
+		padding-left: 0
+	.good-popup_content
+		flex-direction: column
+	.cart-bottom
+		flex-direction: column-reverse
+	.cart-bottom_right
+		width: 100%
+		padding-right: 38px
+	.form-gray
+		width: 100%
+
+	.brands_list
+		display: block
+	.brands_list-left
+		width: auto
+		margin-bottom: 10px
+	.brands-section_content
+		column-count: 4
+	.text-p_50
+		width: 100%
+	.main-screen-container
+		&:after
+			display: none
+	.wrap-dev_trig
+		flex-wrap: wrap
+	.dev_trig-item
+		width: 100%
+		padding-right: 0px
+	.dev-inf_map
+		height: 312px
+	.dev-way-item
+		width: 100%
+		margin-bottom: 20px
+	.dev-way-item--time
+		order: 2
+
+	.cat-btn
+		margin-top: 10px
+	.blog-slider
+
+		.slick-next
+			display: none !important
+	.footer-adress
+		.container
+			height: auto
+			padding-top: 20px
+			padding-bottom: 20px
+			flex-direction: column
+			align-items: flex-start
+	.footer-adress_left
+		flex-direction: column
+		align-items: flex-start
+		margin-bottom: 30px
+	.footer-adress_text
+		margin-bottom: 10px
+	.cat-btn
+		width: 122px
+	.header-search
+		color: #4f4f4f
+		padding-left: 71px
+	.main-screen-content
+		padding-top: 0
+	.header-bottom_left
+		flex-direction: column
+		align-items: flex-start
+	.header-bottom_right
+		flex-wrap: wrap
+	.header-bottom_right-search
+		position: relative
+		top: 4px
+		order: 4
+		margin-right: 0
+
+
+	.cat-btn
+		margin-left: 0
+
+
+
+	.garant-item
+		width: auto
+	.main-screen_good-item
+		width: 100%
+		margin-right: 0
+	.main-screen_good-item-long_head
+		font-size: 24px
+	.main-screen
+		background-image: none
+		.section-head
+			margin-left: -15px
+			margin-right: -15px
+			background-image: url('../img/main-bg-mob.jpg')
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			padding-left: 15px
+			padding-right: 15px
+			padding-top: 50px
+			padding-bottom: 50px
+			position: relative
+			&:before
+				content: ''
+				display: block
+				width: 100%
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+				z-index: 0
+				background-image: url('../img/main-bg-mob-mask.png')
+				background-position: top center
+				background-size: 149%
+			.section-head_inner
+				position: relative
+				z-index: 1
+
+	.main-screen
+		.section-head_item-blue_small
+			color: white
+			width: 100%
+
+	.call-me-inner
+		flex-direction: column
+	.call-me
+		height: auto
+		width: 345px
+
+	.call-me-left
+		width: 100%
+		height: 149px
+		background-size: contain
+
+	.call-me-content
+		width: 100%
+		padding-left: 15px
+		padding-right: 15px
+		padding-top: 20px
+		padding-bottom: 20px
+		.modal-head
+			margin-bottom: 10px
+@media (max-width: 584px)
+	.blog-slider
+		width: 600px
+	.sort-goods 
+		.goods_item
+			.goods_item_price-wrap
+				display: block
+	.goods_item_price-old
+		margin-left: 0
+	.work_workers_trig
+		width: 100%
+		&:before
+			top: 0
+	.footer-top-col
+		margin-right: 0px
+		width: 47%
+		&:last-child
+			width: 100%
+	.footer-top
+		.container
+			justify-content: space-between
+	.footer-bottom
+		display: none
+
+	.curent-brand-content_top
+		padding-left: 0
+		display: block
+	.curent-brand_img
+		position: static
+		margin-left: auto
+		margin-right: auto
+	.curent-brand_good-container
+		.goods_item
+			display: none
+			&:nth-child(1)
+				display: block
+			&:nth-child(2)
+				display: block
+
+	.cart-content_item
+		flex-wrap: wrap
+		justify-content: flex-start
+	.cart-content_item_left
+		width: calc(100% - 27px - 24px - 10px - 100px )
+	.cart-content_price-wrap
+		order: 3
+	.cart-content_del
+		order: 2
+		align-items: flex-start
+		padding-top: 10px
+	.cart-content_price-wrap
+		margin-top: 20px
+
+@media (max-width: 518px)
+	.big-form_big-head
+		width: 100%
+	.inst-block
+		padding-bottom: 50px
+	.reduction
+		&:before
+			top: -130px	
+	.inst-wrap
+		margin-bottom: 15px
+		font-size: 14px
+		padding-left: 21px
+		&:before
+			width: 14px
+			height: 14px
+			top: calc(50% - 6px)
+			background-size: contain
+
+	.addCart-popup_slider-head
+		font-size: 18px
+		margin-bottom: 30px
+	.addCart-popup_slider
+		padding-left: 15px
+		padding-right: 15px
+	.addCart-popup_good
+		border-radius: 0
+		margin-bottom: 0
+		padding-left: 15px
+		padding-right: 15px
+		padding-bottom: 30px
+		border-bottom: 1px solid #F2F2F2
+	.addCart-popup_slider
+		border-radius: 0
+	.add-cart_btn
+		width: 100%
+	.addCart-popup_good-bottom
+		width: 100%
+	.addCart-popup_good-bottom-btn-wrap
+		width: 100%
+	.add-cart_btn
+		margin-right: 0
+
+	.reduction 
+		.descrip-con-red
+			font-size: 32px
+	.cart-link
+		margin-left: 10px
+	.burger
+		margin-left: 10px
+	.call-us-slider
+		height: 290px
+	.call-us-slider-content-head-wrap
+		margin-bottom: 30px
+		.section-head_item-small
+			display: inline
+	header
+		.hours-works
+			display: none
+	.header_phone
+		margin-right: 0
+	.header-bottom
+		padding-top: 15px
+		padding-bottom: 10px
+	.reduction
+		.section-head-center
+			margin-bottom: 20px
+	.main-cat
+		padding-top: 66px
+	.cat-wrap
+		margin-bottom: 22px
+	.our-triggers_logo
+		width: 100%
+	.our-triggers
+		background-image: none
+	.our-triggers_logo
+		text-align: left
+	.our-triggers_text-p
+		font-size: 16px
+	.cat-item
+		width: 100%
+	.cat-item:nth-child(4n+4)
+		margin-right: 0px
+	.cat-item:nth-child(3n+3)
+		margin-right: 0px
+	.cat-item:nth-child(2n+2)
+		margin-right: 0px
+	.cat-item
+		margin-right: 0
+	.section-head_item-blue, .section-head_item-opacity, .section-head_item-red, .section-head_item-green, .descrip-con-red
+		font-size: 32px
+	.descrip
+		font-size: 26px
+	.cat-wrap
+		margin-top: 60px
+
+	.video-slider-wrap
+		width: 520px
+	.video-slider-item
+		width: 100%
+		height: 242px
+		margin-right: 6px
+		padding-left: 10px
+		padding-right: 10px
+		padding-bottom: 10px
+	.video-slider-item_text
+		font-size: 14px
+	.video-slider-item_mask-logo
+		width: 43px
+		height: 43px
+	.video-slider-item_mask
+		padding-top: 26px
+	.video-slider-item_mask-logo
+		margin-bottom: 19px
+	.video-slider-item_mask-content
+		padding-left: 10px
+		padding-right: 10px
+	.video-btn
+		height: 31px
+		font-size: 10px
+
+	.video-logo-comp
+		width: 132px
+	.video-slider-item_text-center
+		padding-top: 10px
+		padding-bottom: 10px
+		margin-bottom: 0
+
+.banner_dots
+	display: none
+@media (max-width: 470px)
+	.workers_gal_row 
+		.workers_gal-row-col 
+			.workers_gal-item
+				width: 113px
+				height: 113px
+		.workers_gal-item
+			width: 226px
+			height: 228px
+	.sort-goods
+		margin-bottom: 20px
+	.sort-goods_pag-left
+		display: none
+	.sort-goods_pag
+		justify-content: center
+	.sort-goods_bottom
+		margin-bottom: 0
+	.sort-goods_show-more
+		margin-top: 0
+	.sort-goods_bottom-wrap
+		display: flex
+		flex-direction: column
+	.sort-goods_pag-right
+		order: 1
+		margin-bottom: 15px
+	.sort-goods_bottom
+		order: 2
+	.brands-section_content
+		column-count: 3
+	.sale-item_content
+		padding-left: 20px
+		padding-right: 20px
+	.sale-item
+		position: static
+		width: 100%
+		padding-left: 0
+	.sale-item_img
+		position: static
+		width: 100%
+		height: 159px
+	.wrap-inf_time-col
+		span
+			font-size: 14px
+
+	.banner-wrap
+		.big-btn-2
+			width: 100%
+			text-align: center
+			line-height: 24px
+			padding-left: 25px
+			padding-right: 25px
+		.wrap-big-btn
+			width: 100%
+			padding-left: 15px
+			padding-right: 15px
+	.banner_dots
+		display: block
+	.banner
+		background-image: url('../img/icons/pacan.png')
+	.banner_dots
+		width: 100%
+		height: 100%
+		position: relative
+	.banner_dots-item
+		width: 84px
+		height: 84px
+		background-position: center
+		background-repeat: no-repeat
+		position: absolute
+		&:before
+			content: ''
+			display: block
+			background-position: center
+			background-repeat: no-repeat
+			position: absolute
+			opacity: 0
+			transition: opacity .3s
+			pointer-events: none
+	.banner_dots-item
+		&:hover
+			&:before
+				opacity: 1
+			.banner_dots-item_text
+				opacity: 1
+		.banner_dots-item_text
+			position: absolute
+			text-align: center
+			opacity: 0
+			transition: opacity .3s
+	.banner_dots-item-1
+		top: 220px
+		left: 60px
+		&:before
+			width: 149px
+			height: 129px
+			background-image: url('../img/icons/arrow2.svg')
+			top: -85px
+			left: 18px
+		.banner_dots-item_text
+			top: -180px
+			left: 80px
+	.banner_dots-item-2
+		right: 31px
+		bottom: 108px
+		&:before
+			width: 93px
+			height: 148px
+			background-image: url('../img/icons/arrow4.svg')
+			top: -105px
+			left: 0px
+		.banner_dots-item_text
+			top: -160px
+			left: -140px
+
+	.banner_dots-item-3
+		top: 120px
+		&:before
+			width: 149px
+			height: 129px
+			background-image: url('../img/icons/arrow1.svg')
+			top: -57px
+			left: 30px
+		.banner_dots-item_text
+			top: -100px
+			left: 100px
+	.banner_dots-item-4
+		top: 140px
+		right: 60px
+		&:before
+			width: 149px
+			height: 129px
+			background-image: url('../img/icons/arrow3.svg')
+			top: -80px
+			left: -33px
+		.banner_dots-item_text
+			top: -130px
+			left: -140px
+
+	.workers_gal_row 
+		.workers_gal-item
+			width: 196px
+			height: 196px
+		.workers_gal-row-col 
+			.workers_gal-item	
+				width: 98px
+				height: 98px	
+@media (max-width: 462px)
+	.blog-slider_item
+		margin-right: 10px
+
+@media (max-width: 446px)
+	.call-us-slider-content_link-wrap
+		&:before
+			top: 10px
+@media (max-width: 401px)
+	.main-screen_garant-head-wrap
+		position: relative
+		display: block
+		padding-right: 30px
+	.garant-ask
+		position: absolute
+		left: 161px
+		bottom: 4px
+
+	.alternovared-logo
+		width: 100%
+		background-size: contain
+	.reduction-item_img
+		height: 300px
+
+	.call-us-slider-content
+		.btn305w
+			width: 100%
+
+	.big-btn_arrow
+		&:after
+			right: 20px
+
+
+@media (max-width: 383px)
+	.call-us-slider-content-head-wrap
+		.section-head_item-small
+			font-size: 25px
+	.call-us-slider-content_link-text
+		font-size: 15px
+	.big-red-phone
+		font-size: 24px
+	.pagination-mob 
+		.pagination-mob_link
+			font-size: 14px
+	.cart-bottom_right
+		padding-left: 15px
+		padding-right: 15px
+		padding-top: 24px
+		padding-bottom: 24px
+	.form-gray
+		padding-left: 15px
+		padding-right: 15px
+		padding-top: 24px
+		padding-bottom: 24px
+	.sort-goods-v2-img
+		width: 60px
+		height: 60px
+	.sort-goods-v2_item-left
+		padding-left: 76px
+	.sort-goods-v2_price
+		margin-left: 0
+
+
+@media (max-width: 375px)
+	.big-btn-2
+		font-weight: 400
+	.banne-bottom_links-text
+		line-height: 30px
+	.call-us-slider-content
+		padding-top: 29px
+	.reduction
+		.descrip
+			line-height: 30px
+			margin-top: 15px
+			margin-bottom: 50px
+	.reduction-content_head
+		margin-top: 20px
+	.wrap-trig
+		margin-bottom: 30px
+	.main-screen 
+		.section-head_item-blue_small
+			line-height: 30px
+			font-size: 26px
+	.fullgrade
+		bottom: 2px
+		left: 185px
+	.main-screen_garant-head
+		line-height: 23px
+	.garant-ask
+		left: 155px
+		bottom: 0
+@media (max-width: 368px)
+	.banner-wrap
+		.banner
+			margin-bottom: 0
+	.big-btn
+		width: 100%
+	.job-item
+		.big-btn
+			width: 171px
+	.btn-inst
+		&:before
+			left: 40px
+
+	.brands_list-item-wrap
+		margin-right: 28px
+		margin-bottom: 10px
+
+	
+@media (max-width: 374px)
+	.sort-goods-v2-img
+		position: static
+		margin-bottom: 10px
+	.sort-goods-v2_item-left
+		padding-left: 0
+@media (max-width: 326px)
+	.garant-ask
+
+		left: 191px
+		bottom: 4px

@@ -1,0 +1,49 @@
+Options -Indexes
+ErrorDocument 404 /404.php
+
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} !^443$
+
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+  #php_value display_errors 1
+  #php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !^(.*)\.(css|zip|doc|htc|xml|xls|js|jpg|gif|png|swf|pdf|rar|wmv|mp3|txt|html|htm|php|ttf|woff|eot)$
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_URI} !index.php
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteCond %{REQUEST_METHOD} !POST
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"
+</IfModule>
+

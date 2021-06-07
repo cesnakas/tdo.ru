@@ -1,0 +1,1 @@
+<a href="#" class="good-page_descript-link">Подробнее alternovamsk.ru</a>

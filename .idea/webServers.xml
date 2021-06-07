@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="22db84c7-0a86-47dc-b10b-3695fd4bcc18" name="tdo.ru" url="http://tdo.ru">
+        <fileTransfer rootFolder="/home/bitrix/ext_www/tdo.ru" accessType="SFTP" host="185.125.58.32" port="22" sshConfigId="d24d75c9-dd43-49a8-8dbf-b591d5131684" sshConfig="root@185.125.58.32:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

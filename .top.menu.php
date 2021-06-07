@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Доставка и оплата", 
+		"/dostavka-i-oplata/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Акции", 
+		"/sale/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Купим ваше оборудование", 
+		"/serv/redemption-of-trading-equipment/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Проектирование", 
+		"/serv/turnkey-design-of-shops-and-restaurants/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"/serv/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

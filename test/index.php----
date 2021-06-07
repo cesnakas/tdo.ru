@@ -1,0 +1,46 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Тест");
+
+$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", array(
+	"PATH"       => "",
+	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+	"SITE_ID"    => "s2",
+	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+	"START_FROM" => "0",
+	// Номер пункта, начиная с которого будет построена навигационная цепочка
+),
+false
+);
+
+?>
+
+11111
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:catalog.section.list",
+	"",
+	Array(
+		"ADD_SECTIONS_CHAIN" => "N",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"COUNT_ELEMENTS" => "N",
+		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+		"FILTER_NAME" => "sectionsFilter",
+		"IBLOCK_ID" => "26",
+		"IBLOCK_TYPE" => "CRM_PRODUCT_CATALOG",
+		"SECTION_CODE" => "",
+		"SECTION_FIELDS" => array("",""),
+		"SECTION_ID" => "#SECTION_CODE_PATH#/",
+		"SECTION_URL" => "/catalog/#SECTION_CODE_PATH#/",
+		"SECTION_USER_FIELDS" => array("",""),
+		"SHOW_PARENT_NAME" => "Y",
+		"TOP_DEPTH" => "1",
+		"VIEW_MODE" => "TEXT"
+	)
+);?>
+
+
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
